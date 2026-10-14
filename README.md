@@ -1,4 +1,181 @@
-# ClouderaAppliedAI
+# Cloudera Blueprint: Insurance Customer 360 Dashboard
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](requirements.txt)
+[![Cloudera Blueprint](https://img.shields.io/badge/Cloudera-Blueprint-f96702.svg)](METADATA.yaml)
+[![Stars](https://img.shields.io/github/stars/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/stargazers)
+[![Forks](https://img.shields.io/github/forks/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/network/members)
+
+> Unified customer dashboard for **Cloudera AI (CAI)**, backed by a **DDS-aligned SQLite warehouse**, with churn scoring, synthetic interaction events, and optional **Amazon Bedrock** for AI insights and outreach drafts.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Demo](#demo)
+- [Use Case](#use-case)
+- [Key Features](#key-features)
+- [Quickstart / Guide](#quickstart--guide)
+- [Architecture / Software Components](#architecture--software-components)
+- [Target Audience](#target-audience)
+- [Repository Structure](#repository-structure)
+- [Prerequisites](#prerequisites)
+- [Hardware Requirements](#hardware-requirements)
+- [Documentation](#documentation)
+- [Development workflow](#development-workflow)
+- [Configuration and localization](#configuration-and-localization)
+- [Warehouse domains](#warehouse-domains)
+- [Churn intelligence](#churn-intelligence)
+- [Local development](#local-development)
+- [`__file__` / Workbench interactive runs](#__file__--workbench-interactive-runs)
+- [Scale to ~5,000 customers](#scale-to-5000-customers)
+- [API performance (large warehouses)](#api-performance-large-warehouses)
+- [Frontend without Node on PATH](#frontend-without-node-on-path)
+- [Applied AI sentiment reference service](#applied-ai-sentiment-reference-service)
+- [Bedrock Playground](#bedrock-playground)
+- [License](#license)
+
+## Overview
+
+**Insurance Customer 360** is a launchable **Cloudera AI application (AMP)** that gives agents and advisors a single pane for customer value, policies, investments, foreclosures, churn risk, and AI-generated insights. A FastAPI backend serves a React dashboard from one process; import jobs install dependencies, build the UI, seed a synthetic warehouse, train a churn model, and start the app. The warehouse schema mirrors enterprise DDS naming (`DWH_*` facts and dimensions plus `APP_*` application tables). Optional Bedrock integration powers customer summaries and clickable outreach drafts (email, SMS, call scripts) when AWS credentials are configured.
+
+## Demo
+
+Architecture diagrams and request-flow illustrations show how CAI import stages, SQLite, FastAPI + React, and optional LLM providers fit together.
+
+| Resource                                                               | Description                                                                              |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [Runtime architecture (PNG)](docs/diagrams/runtime-architecture.png)   | CAI AMP import jobs, SQLite warehouse, FastAPI + React, optional LLM providers           |
+| [Logical request flows (PNG)](docs/diagrams/logical-request-flows.png) | REST reads and SSE streams for insights, retention queue, assistant, and outreach drafts |
+| [Diagram sources & regenerate](docs/diagrams/README.md)                | Mermaid (`.mmd`) sources and `mermaid-cli` commands to refresh PNGs                      |
+
+![Runtime architecture](docs/diagrams/runtime-architecture.png)
+
+![Logical request flows](docs/diagrams/logical-request-flows.png)
+
+## Use Case
+
+Insurance distribution and service teams need a **360° customer view** that combines policies, savings, risk signals, and recent interactions without standing up a full data lake for a proof of concept. Compliance and retention workflows also require **explainable churn scores** and **auditable AI assistance** (insights and draft outreach) rather than opaque chat-only tools.
+
+This blueprint delivers a **CAI-hosted dashboard** on realistic synthetic data: seeded warehouse tables, trained churn tiers, interaction events for narrative context, and Bedrock-backed summaries and drafts when configured. The outcome is a demo-ready Customer 360 experience that architects can extend toward Hive, OpDB, or production AMP deployment.
+
+## Key Features
+
+- **DDS-aligned SQLite warehouse** with customers, policies, investments, foreclosures, interaction events, and application caches for fast API reads.
+- **AMP import pipeline** — dependency install, React build, database seed, churn training, and application launch via `.project-metadata.yaml`.
+- **Churn intelligence** — logistic regression on warehouse behaviour plus interaction aggregates; scores exposed in the UI and API.
+- **Amazon Bedrock** (optional) for customer AI insights and generated recommendation drafts; template fallbacks when Bedrock is unavailable.
+- **Localization** — multi-region seed profiles (`il`, `gb`, `es`, `sa`, `fr`), seed languages, UI packs (`en`, `fr`, `es`, `he`, `ar`), and admin reseed controls.
+- **Prebuilt `frontend/dist/`** so CAI runtimes without Node can still deploy; optional portable Node bootstrap for UI rebuilds.
+- **Companion demos** in-repo: Applied AI sentiment reference service and a separate Bedrock chat playground.
+
+## Quickstart / Guide
+
+### Deploy on Cloudera AI
+
+This repo is packaged as a **CAI application (AMP)** via `.project-metadata.yaml` and
+`amp-catalog.yaml`. Step-by-step instructions: [docs/CAI_APPLICATION.md](docs/CAI_APPLICATION.md).
+
+1. Create a project from this Git repository and **configure as prototype**, or launch from your
+  AMP catalog entry (**Insurance Customer 360**).
+2. On first import, `.project-metadata.yaml` runs these stages in order:
+
+  | Stage | Folder / script                   | Purpose                                      |
+  | ----- | --------------------------------- | -------------------------------------------- |
+  | 1     | `1_session-install-dependencies/` | Python deps + editable `customer360` install |
+  | 2     | `scripts/build_frontend.py`       | `npm run build` → `frontend/dist`            |
+  | 3     | `2_job-init-database/`            | Seed `data/customer360.db`                   |
+  | 4     | `3_job-train-churn-model/`        | Churn model → `APP_CUSTOMER_CHURN_SCORES`    |
+  | 5     | `4_application/start-app.py`      | FastAPI + React dashboard                    |
+
+3. Application scripts bind to `127.0.0.1` and use `CDSW_APP_PORT` (Workbench/CML) or `APP_PORT` (AI Inference, default 8080). Do not hard-code ports.
+
+### Local quickstart
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m pip install -e .
+python3 scripts/init_db.py
+python3 4_application/start-app.py
+python3 -m pytest   # optional; integration tests seed a temp warehouse automatically
+```
+
+## Architecture / Software Components
+
+The runtime stacks **Cloudera AI** import jobs, a **SQLite** warehouse, **FastAPI** APIs, and a **React** UI. Optional **Amazon Bedrock** calls run from the Python service layer for insights and outreach generation.
+
+See [Demo](#demo) for PNG architecture and request-flow diagrams. Regenerate diagram assets from Mermaid sources under `docs/diagrams/` per [docs/diagrams/README.md](docs/diagrams/README.md).
+
+### Project layout (CAI-compatible)
+
+```
+.
+├── .project-metadata.yaml          # CAI AMP import + application tasks
+├── amp-catalog.yaml                # Optional AMP catalog registration
+├── docs/CAI_APPLICATION.md         # Deploy guide
+├── 1_session-install-dependencies/ # stage 1: pip install
+├── 2_job-init-database/            # stage 3: warehouse seed
+├── 3_job-train-churn-model/        # stage 4: churn training
+├── 4_application/                  # stage 5: FastAPI app launcher
+├── customer360/                    # Shared Python package (seed, DB, churn, API)
+├── data/schema.sql                 # Warehouse DDL
+├── scripts/build_frontend.py       # stage 2: React build
+└── scripts/init_db.py                # Local dev CLI (same as stage 3 job)
+```
+
+## Target Audience
+
+- **Solution architects and SEs** — reference Customer 360 wiring on Cloudera AI with AMP import stages and optional Bedrock.
+- **Data and ML engineers** — SQLite seed patterns, churn training job, and API cache design scalable toward Hive or OpDB.
+- **Insurance product and retention teams** — demo UX for churn tiers, insights, and outreach drafts.
+- **Developers extending the blueprint** — monorepo-friendly layout with editable `customer360` package and committed frontend build output.
+
+## Repository Structure
+
+| Path | Description |
+| --- | --- |
+| `.project-metadata.yaml` / `amp-catalog.yaml` | CAI AMP prototype definition and catalog registration |
+| `customer360/` | Seed, DB access, churn training, FastAPI routers |
+| `frontend/` | React UI sources; `frontend/dist/` is the committed production build |
+| `data/schema.sql` | Warehouse DDL |
+| `docs/CAI_APPLICATION.md` | Deploy and environment guide |
+| `docs/diagrams/` | Architecture PNGs and Mermaid sources |
+| `scripts/` | `init_db.py`, `scale_warehouse.py`, `refresh_api_caches.py`, `build_frontend.py` |
+| `app/` | Applied AI sentiment reference service (separate FastAPI demo) |
+| `bedrock-playground/` | Standalone Bedrock chat playground (React + FastAPI) |
+| `METADATA.yaml` | Cloudera blueprint catalog metadata |
+
+## Prerequisites
+
+**Cloudera platform**
+
+- Cloudera AI Workbench (or compatible CAI runtime) with project import and Application support.
+- Network access for optional Bedrock and for portable Node download during UI rebuilds (`nodejs.org`).
+
+**External services**
+
+- **Amazon Bedrock** (optional) — AWS credentials or instance profile; see `.env.example` and `CUSTOMER360_BEDROCK_*` variables in `.project-metadata.yaml`.
+
+**Tooling**
+
+- Python **3.11+** (see `pyproject.toml`).
+- `git`.
+- `requirements.txt` / `requirements-dev.txt` for Python dependencies.
+- **Node 18+** only when modifying the Customer 360 React UI (see [Frontend without Node on PATH](#frontend-without-node-on-path)).
+
+## Hardware Requirements
+
+| Deployment | Minimum |
+| --- | --- |
+| Launchable / demo (default ~2,000 customers) | 2 vCPU, 8 GB RAM, ~5 GB storage for SQLite, churn model artifacts, and the CAI Application session |
+| Larger warehouse (~5,000 customers) | Additional storage for `data/customer360.db`; run `scripts/scale_warehouse.py` or `CUSTOMER360_SEED_CUSTOMERS` (see [Scale to ~5,000 customers](#scale-to-5000-customers)) |
+| Production / enterprise | Size per concurrent users and move warehouse to managed storage (Hive / OpDB); Bedrock and AMP sizing per org standards |
+
+## Documentation
+
+- [CAI application deploy guide](docs/CAI_APPLICATION.md)
+- [Architecture diagram sources](docs/diagrams/README.md)
+- [Bedrock Playground](bedrock-playground/README.md)
+- [Cloudera Machine Learning / CAI documentation](https://docs.cloudera.com/machine-learning/cloud/index.html)
 
 ## Development workflow
 
@@ -20,45 +197,9 @@ git push -u origin cursor/your-feature-7a3d
 The repo ships a prebuilt `frontend/dist/`; run `npm run build` in `frontend/` only
 when you change the UI.
 
-## Insurance Customer 360
+## Configuration and localization
 
-Unified customer dashboard for Cloudera AI (CAI), backed by a DDS-aligned SQLite warehouse.
-
-### Architecture resources
-
-
-| Resource                                                               | Description                                                                              |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| [Runtime architecture (PNG)](docs/diagrams/runtime-architecture.png)   | CAI AMP import jobs, SQLite warehouse, FastAPI + React, optional LLM providers           |
-| [Logical request flows (PNG)](docs/diagrams/logical-request-flows.png) | REST reads and SSE streams for insights, retention queue, assistant, and outreach drafts |
-| [Diagram sources & regenerate](docs/diagrams/README.md)                | Mermaid (`.mmd`) sources and `mermaid-cli` commands to refresh PNGs                      |
-
-
-![Runtime architecture](docs/diagrams/runtime-architecture.png)
-
-![Logical request flows](docs/diagrams/logical-request-flows.png)
-
-### Deploy on Cloudera AI
-
-This repo is packaged as a **CAI application (AMP)** via `.project-metadata.yaml` and
-`amp-catalog.yaml`. Step-by-step instructions: [docs/CAI_APPLICATION.md](docs/CAI_APPLICATION.md).
-
-1. Create a project from this Git repository and **configure as prototype**, or launch from your
-  AMP catalog entry (**Insurance Customer 360**).
-2. On first import, `.project-metadata.yaml` runs these stages in order:
-
-  | Stage | Folder / script                   | Purpose                                      |
-  | ----- | --------------------------------- | -------------------------------------------- |
-  | 1     | `1_session-install-dependencies/` | Python deps + editable `customer360` install |
-  | 2     | `scripts/build_frontend.py`       | `npm run build` → `frontend/dist`            |
-  | 3     | `2_job-init-database/`            | Seed `data/customer360.db`                   |
-  | 4     | `3_job-train-churn-model/`        | Churn model → `APP_CUSTOMER_CHURN_SCORES`    |
-  | 5     | `4_application/start-app.py`      | FastAPI + React dashboard                    |
-
-3. Application scripts bind to `127.0.0.1` and use `CDSW_APP_PORT` (Workbench/CML) or `APP_PORT` (AI Inference, default 8080). Do not hard-code ports.
-
-Optional environment variable:
-
+Optional environment variables:
 
 | Variable                         | Default               | Purpose                                                                                                             |
 | -------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +208,6 @@ Optional environment variable:
 | `CUSTOMER360_SEED_LANGUAGE`      | (per region)          | **Seed language** for interaction copy: `en`, `fr`, `es`, `he`, `ar` (independent of region)                        |
 | `CUSTOMER360_SEED_CUSTOMERS`     | `2000`                | Customer count when seeding (see scale docs)                                                                        |
 | `AWS_*`, `CUSTOMER360_BEDROCK_*` | —                     | Amazon Bedrock (insights + outreach drafts); see `.env.example`                                                     |
-
 
 **Region** profiles drive warehouse geography (customer names, cities, employers, currency) and
 LLM market context. **Seed language** controls interaction event text and is stored separately
@@ -104,27 +244,7 @@ writes customers and interaction copy from that bundle, and caches it under
 `CUSTOMER360_SEED_LLM_REFRESH=1` to bypass cache, and `CUSTOMER360_SEED_REQUIRE_LLM=1` to fail if
 generation is unavailable.
 
-### Project layout (CAI-compatible)
-
-```
-.
-├── .project-metadata.yaml          # CAI AMP import + application tasks
-├── amp-catalog.yaml                # Optional AMP catalog registration
-├── docs/CAI_APPLICATION.md         # Deploy guide
-├── 1_session-install-dependencies/ # stage 1: pip install
-├── 2_job-init-database/            # stage 3: warehouse seed
-├── 3_job-train-churn-model/        # stage 4: churn training
-├── 4_application/                  # stage 5: FastAPI app launcher
-├── customer360/                    # Shared Python package (seed, DB, churn, API)
-├── data/schema.sql                 # Warehouse DDL
-├── scripts/build_frontend.py       # stage 2: React build
-└── scripts/init_db.py                # Local dev CLI (same as stage 3 job)
-```
-
-
-
-### Warehouse domains
-
+## Warehouse domains
 
 | Table                                                  | Domain                                                   |
 | ------------------------------------------------------ | -------------------------------------------------------- |
@@ -138,10 +258,7 @@ generation is unavailable.
 | `APP_CUSTOMER_INTERACTION_EVENTS`                      | Synthetic reviews, agent questions, and web searches     |
 | `APP_CUSTOMER_AI_INSIGHTS`                             | Cached Bedrock (or fallback) customer summaries          |
 
-
-
-
-### Churn intelligence
+## Churn intelligence
 
 Features are built from warehouse behaviour plus **interaction events** (reviews, agent
 questions, product/help searches), normalized with `StandardScaler`, and modeled with
@@ -154,21 +271,11 @@ are not used when Bedrock is available.
 python 3_job-train-churn-model/train_churn.py
 ```
 
+## Local development
 
+Same commands as [Local quickstart](#local-quickstart) under **Quickstart / Guide**. Generated databases are gitignored (`data/*.db`).
 
-### Local development
-
-```bash
-python3 -m pip install -r requirements-dev.txt
-python3 -m pip install -e .
-python3 scripts/init_db.py
-python3 4_application/start-app.py
-python3 -m pytest   # optional; integration tests seed a temp warehouse automatically
-```
-
-
-
-### `__file__` / Workbench interactive runs
+## `__file__` / Workbench interactive runs
 
 `Path(__file__)` is only defined when Python executes a **file** (for example
 `python 2_job-init-database/init_database.py`). In an interactive Workbench cell,
@@ -212,9 +319,7 @@ If install fails with a missing `requirements.txt`, run:
 %run 1_session-install-dependencies/install.py
 ```
 
-Generated databases are gitignored (`data/*.db`).
-
-### Scale to ~5,000 customers
+## Scale to 5,000 customers
 
 The seed generator uses the same DDS-aligned patterns as the default warehouse (policies,
 investments, coverage snapshots, foreclosures, interactions) and scales every table from
@@ -226,7 +331,7 @@ python3 scripts/scale_warehouse.py --customers 5000
 
 Or set `CUSTOMER360_SEED_CUSTOMERS=5000` before the init job / `python3 -m customer360.seed --customers 5000`, then run `3_job-train-churn-model/train_churn.py` for churn scores.
 
-### API performance (large warehouses)
+## API performance (large warehouses)
 
 After seeding, the warehouse precomputes:
 
@@ -243,7 +348,7 @@ python3 scripts/refresh_api_caches.py
 
 The customer list API enforces `limit` **≤ 100**; the UI defaults to 50 with 25/50/100 options.
 
-### Frontend without Node on PATH
+## Frontend without Node on PATH
 
 The repo includes a prebuilt `frontend/dist/`. Restart the application after `git pull` —
 you do **not** need `npm` for that.
@@ -296,3 +401,6 @@ python start.py
 See [bedrock-playground/README.md](bedrock-playground/README.md) for architecture,
 CML/CDSW port notes, and security guidance.
 
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
