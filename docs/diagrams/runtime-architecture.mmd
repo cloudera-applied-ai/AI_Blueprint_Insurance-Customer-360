@@ -1,0 +1,45 @@
+flowchart TB
+  subgraph CAI["Cloudera AI (Project / AMP)"]
+    direction TB
+    J1["1_session-install-dependencies<br/>pip + customer360 package"]
+    J2["scripts/build_frontend.py<br/>optional React build → frontend/dist"]
+    J3["2_job-init-database<br/>seed warehouse"]
+    J4["3_job-train-churn-model<br/>logistic regression → scores"]
+    J5["4_application/start-app.py<br/>Uvicorn + FastAPI"]
+    J1 --> J2 --> J3 --> J4 --> J5
+  end
+
+  subgraph Data["Governed demo warehouse (SQLite)"]
+    DIM["DWH_DIM_*<br/>customers, policies"]
+    FCT["DWH_FCT_*<br/>foreclosures, investments, policy status"]
+    APP["APP_*<br/>interactions, churn scores, metrics caches"]
+    J3 --> DIM & FCT & APP
+    J4 --> APP
+  end
+
+  subgraph App["Customer 360 application"]
+    API["FastAPI<br/>customer360.api"]
+    UI["React SPA<br/>frontend/dist"]
+    J5 --> API
+    API --> UI
+  end
+
+  subgraph Users["Users"]
+    Browser["Browser<br/>Business · Customer · Engagement · Products · Admin"]
+    Browser --> UI
+    Browser --> API
+  end
+
+  subgraph GenAI["LLM providers (optional)"]
+    BR["Amazon Bedrock"]
+    OAI["OpenAI-compatible<br/>PrivateAI / Ollama / vLLM"]
+  end
+
+  API -->|"insights, drafts, agent, retention stream"| BR
+  API -->|"admin-selected provider"| OAI
+  J3 -.->|"optional LLM-assisted seed"| GenAI
+
+  subgraph Prod["Production pattern (not in repo)"]
+    ICE["CDW / Iceberg tables"]
+  end
+  ICE -.->|"same logical model"| Data

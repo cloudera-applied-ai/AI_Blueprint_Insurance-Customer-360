@@ -1,0 +1,273 @@
+{
+  "territory_id": "es",
+  "seed_language": "es",
+  "source": "profile",
+  "first_names": [
+    "Carlos",
+    "Ana",
+    "Luis",
+    "María",
+    "Javier",
+    "Lucía",
+    "Miguel",
+    "Sofía",
+    "Pablo",
+    "Elena",
+    "Diego",
+    "Laura",
+    "Antonio",
+    "Carmen",
+    "Manuel",
+    "Isabel",
+    "Francisco",
+    "Paula",
+    "Jorge",
+    "Marta"
+  ],
+  "last_names": [
+    "García",
+    "Rodríguez",
+    "González",
+    "Fernández",
+    "López",
+    "Martínez",
+    "Sánchez",
+    "Pérez",
+    "Gómez",
+    "Martín",
+    "Jiménez",
+    "Ruiz",
+    "Hernández",
+    "Díaz",
+    "Moreno",
+    "Muñoz",
+    "Álvarez",
+    "Romero",
+    "Navarro",
+    "Torres"
+  ],
+  "cities": [
+    {
+      "name": "Madrid",
+      "street": "Gran Vía",
+      "postal_code": 28001
+    },
+    {
+      "name": "Barcelona",
+      "street": "Passeig de Gràcia",
+      "postal_code": 8001
+    },
+    {
+      "name": "Valencia",
+      "street": "Calle Colón",
+      "postal_code": 46001
+    },
+    {
+      "name": "Sevilla",
+      "street": "Avenida de la Constitución",
+      "postal_code": 41001
+    },
+    {
+      "name": "Zaragoza",
+      "street": "Paseo Independencia",
+      "postal_code": 50001
+    },
+    {
+      "name": "Málaga",
+      "street": "Calle Larios",
+      "postal_code": 29001
+    },
+    {
+      "name": "Bilbao",
+      "street": "Gran Vía",
+      "postal_code": 48001
+    },
+    {
+      "name": "Murcia",
+      "street": "Plaza Circular",
+      "postal_code": 30001
+    }
+  ],
+  "city_aliases": {
+    "madrid": "Madrid",
+    "barcelona": "Barcelona",
+    "valencia": "Valencia",
+    "sevilla": "Sevilla",
+    "seville": "Sevilla",
+    "zaragoza": "Zaragoza",
+    "malaga": "Málaga",
+    "málaga": "Málaga",
+    "bilbao": "Bilbao",
+    "murcia": "Murcia"
+  },
+  "employers": [
+    [
+      1001,
+      "Iberdrola SA"
+    ],
+    [
+      1002,
+      "Inditex Group"
+    ],
+    [
+      1003,
+      "BBVA España"
+    ],
+    [
+      1004,
+      "Telefónica"
+    ],
+    [
+      1005,
+      "Repsol"
+    ]
+  ],
+  "corp_names": {
+    "1": "Mapfre Vida",
+    "7": "Mutua Madrileña Pensiones",
+    "8": "CaixaBank Ahorro"
+  },
+  "funds": [
+    [
+      7,
+      5101,
+      "Plan de pensiones — Equilibrado"
+    ],
+    [
+      7,
+      5102,
+      "Plan de pensiones — Renta variable"
+    ],
+    [
+      1,
+      2101,
+      "Ahorro vida — Conservador"
+    ],
+    [
+      1,
+      2102,
+      "Ahorro vida — Crecimiento"
+    ],
+    [
+      8,
+      8101,
+      "Fondo de inversión — Multiactivo"
+    ],
+    [
+      8,
+      8102,
+      "Fondo de inversión — Índice global"
+    ]
+  ],
+  "marital_status": [
+    {
+      "code": "S",
+      "label": "Soltero/a"
+    },
+    {
+      "code": "C",
+      "label": "Casado/a"
+    },
+    {
+      "code": "D",
+      "label": "Divorciado/a"
+    },
+    {
+      "code": "V",
+      "label": "Viudo/a"
+    }
+  ],
+  "customer_types": [
+    {
+      "type": 1,
+      "label": "DNI"
+    },
+    {
+      "type": 2,
+      "label": "Pasaporte"
+    },
+    {
+      "type": 3,
+      "label": "NIE"
+    },
+    {
+      "type": 5,
+      "label": "Sociedad"
+    }
+  ],
+  "interaction_copy": {
+    "product_searches": [
+      "Comparar fondos de pensiones equilibrados vs renta variable",
+      "Elegibilidad para cobertura de enfermedad crítica",
+      "Añadir familiar al seguro de salud complementario",
+      "Límites de aportación al plan de estudios",
+      "Calculadora de cobertura de vida",
+      "Cotización de renovación de seguro de hogar"
+    ],
+    "help_searches": [
+      "Cómo actualizar el método de pago",
+      "Cancelar o rescindir una póliza",
+      "Opciones por recibo impagado",
+      "Código de verificación del portal",
+      "Descargar certificado anual de la póliza",
+      "Proceso de reclamación",
+      "Cambiar preferencias de comunicación"
+    ],
+    "agent_topics": [
+      {
+        "title": "Explicación del aumento de prima",
+        "topic": "billing",
+        "resolved_default": true
+      },
+      {
+        "title": "Cambiar tramo de inversión del plan de pensiones",
+        "topic": "investments",
+        "resolved_default": true
+      },
+      {
+        "title": "Solicitar cancelación de póliza",
+        "topic": "retention",
+        "resolved_default": false
+      },
+      {
+        "title": "Brecha de cobertura tras cambio de empleo",
+        "topic": "coverage",
+        "resolved_default": true
+      },
+      {
+        "title": "Impacto de embargo en pólizas",
+        "topic": "legal",
+        "resolved_default": false
+      },
+      {
+        "title": "Seguimiento del estado del siniestro",
+        "topic": "claims",
+        "resolved_default": true
+      },
+      {
+        "title": "Cargo duplicado en tarjeta",
+        "topic": "billing",
+        "resolved_default": false
+      }
+    ],
+    "review_titles": [
+      "Experiencia en la app móvil",
+      "Rapidez en la gestión de siniestros",
+      "Trato del agente telefónico",
+      "Claridad del extracto de pensiones",
+      "Red del plan de salud",
+      "Herramientas digitales de autoservicio"
+    ],
+    "review_detail_positive": "Destacó la rapidez en la resolución.",
+    "review_detail_negative": "Pidió un seguimiento más claro.",
+    "agent_detail_resolved": "El agente indicó los siguientes pasos.",
+    "agent_detail_unresolved": "Cliente pendiente de devolución de llamada.",
+    "web_session_detail": "Sesión registrada en analítica digital."
+  },
+  "foreclosure_labels": {
+    "yes": "Sí",
+    "no": "No",
+    "policy": "Póliza",
+    "claim": "Siniestro"
+  }
+}

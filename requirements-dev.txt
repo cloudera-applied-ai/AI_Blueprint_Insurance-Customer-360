@@ -1,0 +1,6 @@
+# Local development and pytest (Customer 360 + sentiment demo).
+-r requirements.txt
+-r 1_session-install-dependencies/requirements-ml.txt
+pytest>=8,<9
+httpx>=0.28,<1
+deep-translator>=1.11,<2

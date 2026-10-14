@@ -1,0 +1,271 @@
+{
+  "territory_id": "gb",
+  "seed_language": "en",
+  "source": "llm",
+  "first_names": [
+    "LLMGenerated",
+    "Emily",
+    "Oliver",
+    "Sophie",
+    "Harry",
+    "Amelia",
+    "George",
+    "Isla",
+    "Noah",
+    "Olivia",
+    "Jack",
+    "Charlotte",
+    "Leo",
+    "Grace",
+    "Arthur",
+    "Mia",
+    "Henry",
+    "Freya",
+    "Thomas",
+    "Evie"
+  ],
+  "last_names": [
+    "Smith",
+    "Jones",
+    "Williams",
+    "Taylor",
+    "Brown",
+    "Davies",
+    "Wilson",
+    "Evans",
+    "Thomas",
+    "Johnson",
+    "Roberts",
+    "Walker",
+    "Wright",
+    "Thompson",
+    "White",
+    "Hughes",
+    "Edwards",
+    "Green",
+    "Hall",
+    "Lewis"
+  ],
+  "cities": [
+    {
+      "name": "London",
+      "street": "High Street",
+      "postal_code": 10001
+    },
+    {
+      "name": "Manchester",
+      "street": "Deansgate",
+      "postal_code": 20001
+    },
+    {
+      "name": "Birmingham",
+      "street": "New Street",
+      "postal_code": 30001
+    },
+    {
+      "name": "Leeds",
+      "street": "Briggate",
+      "postal_code": 40001
+    },
+    {
+      "name": "Glasgow",
+      "street": "Sauchiehall Street",
+      "postal_code": 50001
+    },
+    {
+      "name": "Bristol",
+      "street": "Park Street",
+      "postal_code": 60001
+    },
+    {
+      "name": "Edinburgh",
+      "street": "Princes Street",
+      "postal_code": 70001
+    },
+    {
+      "name": "Cardiff",
+      "street": "Queen Street",
+      "postal_code": 80001
+    }
+  ],
+  "city_aliases": {
+    "london": "London",
+    "manchester": "Manchester",
+    "birmingham": "Birmingham",
+    "leeds": "Leeds",
+    "glasgow": "Glasgow",
+    "bristol": "Bristol",
+    "edinburgh": "Edinburgh",
+    "cardiff": "Cardiff"
+  },
+  "employers": [
+    [
+      1001,
+      "NHS Trust North"
+    ],
+    [
+      1002,
+      "Barclays UK"
+    ],
+    [
+      1003,
+      "Rolls-Royce plc"
+    ],
+    [
+      1004,
+      "BT Group"
+    ],
+    [
+      1005,
+      "Tesco Stores Ltd"
+    ]
+  ],
+  "corp_names": {
+    "1": "Aviva Life",
+    "7": "Legal & General Pension",
+    "8": "Standard Life Savings"
+  },
+  "funds": [
+    [
+      7,
+      5101,
+      "Workplace Pension — Balanced"
+    ],
+    [
+      7,
+      5102,
+      "Workplace Pension — Equity"
+    ],
+    [
+      1,
+      2101,
+      "Life Savings — Cautious"
+    ],
+    [
+      1,
+      2102,
+      "Life Savings — Growth"
+    ],
+    [
+      8,
+      8101,
+      "ISA — Multi-Asset"
+    ],
+    [
+      8,
+      8102,
+      "ISA — Global Index"
+    ]
+  ],
+  "marital_status": [
+    {
+      "code": "S",
+      "label": "Single"
+    },
+    {
+      "code": "M",
+      "label": "Married"
+    },
+    {
+      "code": "D",
+      "label": "Divorced"
+    },
+    {
+      "code": "W",
+      "label": "Widowed"
+    }
+  ],
+  "customer_types": [
+    {
+      "type": 1,
+      "label": "National Insurance Number"
+    },
+    {
+      "type": 2,
+      "label": "Passport"
+    },
+    {
+      "type": 3,
+      "label": "Driving Licence"
+    },
+    {
+      "type": 5,
+      "label": "Corporation"
+    }
+  ],
+  "interaction_copy": {
+    "product_searches": [
+      "Compare pension balanced vs equity tracks",
+      "Critical illness rider eligibility",
+      "Add family member to health supplementary",
+      "Study fund contribution limits",
+      "Life insurance coverage calculator",
+      "Property policy renewal quote"
+    ],
+    "help_searches": [
+      "How to update payment method",
+      "Cancel or surrender a policy",
+      "Missing premium payment options",
+      "Portal login verification code",
+      "Download annual policy statement",
+      "Complaint escalation process",
+      "Change communication preferences"
+    ],
+    "agent_topics": [
+      {
+        "title": "Premium increase explanation",
+        "topic": "billing",
+        "resolved_default": true
+      },
+      {
+        "title": "Switch investment track on pension",
+        "topic": "investments",
+        "resolved_default": true
+      },
+      {
+        "title": "Request policy cancellation",
+        "topic": "retention",
+        "resolved_default": false
+      },
+      {
+        "title": "Coverage gap after job change",
+        "topic": "coverage",
+        "resolved_default": true
+      },
+      {
+        "title": "Foreclosure impact on policies",
+        "topic": "legal",
+        "resolved_default": false
+      },
+      {
+        "title": "Claim status follow-up",
+        "topic": "claims",
+        "resolved_default": true
+      },
+      {
+        "title": "Duplicate charge on credit card",
+        "topic": "billing",
+        "resolved_default": false
+      }
+    ],
+    "review_titles": [
+      "Mobile app experience",
+      "Claims handling speed",
+      "Agent courtesy on phone",
+      "Pension statement clarity",
+      "Health plan network",
+      "Digital self-service tools"
+    ],
+    "review_detail_positive": "Praised quick resolution.",
+    "review_detail_negative": "Requested clearer follow-up.",
+    "agent_detail_resolved": "Agent provided next steps.",
+    "agent_detail_unresolved": "Customer awaiting callback.",
+    "web_session_detail": "Session recorded in digital analytics."
+  },
+  "foreclosure_labels": {
+    "yes": "Yes",
+    "no": "No",
+    "policy": "Policy",
+    "claim": "Claim"
+  }
+}

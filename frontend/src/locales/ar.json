@@ -1,0 +1,1039 @@
+{
+  "app": {
+    "language": "اللغة",
+    "languageEn": "En",
+    "languageHe": "He",
+    "languageEs": "Es",
+    "languageAr": "Ar",
+    "languageFr": "Fr",
+    "brand": {
+      "title": "Insurance Customer 360",
+      "tagline": "Cloudera AI · Business and Customer Views"
+    },
+    "a11y": {
+      "applicationAreas": "مجالات التطبيق:",
+      "administrationNav": "الإدارة",
+      "skipToMain": "تخطى إلى المحتوى الرئيسي",
+      "mainContent": "المحتوى الرئيسي"
+    },
+    "dataFreshness": {
+      "label": "حداثة البيانات",
+      "warehouse": "المستودع",
+      "metricsCache": "ذاكرة التخزين المؤقت للمقاييس",
+      "portfolioCache": "ذاكرة التخزين المؤقت للمحفظة",
+      "churnScores": "درجات الركود",
+      "churnScored": "{{date}} ({{count}} CUSTOMERS)"
+    },
+    "title": "Customer 360 — التأمين"
+  },
+  "nav": {
+    "workspace": "Workspace (مساحة العمل)",
+    "business": {
+      "title": "مقر العمل",
+      "desc": "الكتاب والمجموعات ومؤشرات الأداء الرئيسية للمحفظة"
+    },
+    "customer": {
+      "title": "يتعهد العميل",
+      "desc": "360 الملف الشخصي والرؤى والتوعية"
+    },
+    "engagement": {
+      "title": "المشاركة",
+      "desc": "نقاط الاتصال والتأثير وأفضل إجراء تالٍ",
+      "short": "المشاركة"
+    },
+    "products": {
+      "title": "المنتجات",
+      "desc": "خريطة حرارة المنتج والتنقيب عن العملاء"
+    },
+    "admin": {
+      "section": "الإدارة",
+      "title": "البيانات والمشرف",
+      "desc": "الصحة والمستودع ومصدر البيانات"
+    }
+  },
+  "llm": {
+    "brand": {
+      "bedrock": "Amazon Bedrock",
+      "privateAi": "PrivateAI",
+      "local": "مستشار محلي"
+    }
+  },
+  "common": {
+    "loading": "جار التحميل",
+    "yes": "نعم",
+    "no": "لا",
+    "none": "لا یوجد",
+    "showAll": "عرض الكل",
+    "emDash": "—",
+    "a11y": {
+      "breadcrumb": "مسار التنقل",
+      "selected": "الاختيار",
+      "notSelected": "لم يتم اختياره",
+      "filterToggle": "{{label}}. {{description}} {{state}}.",
+      "loading": "إنزال"
+    }
+  },
+  "errors": {
+    "overviewLoadFailed": "تعذر تحميل النظرة العامة",
+    "portfolioLoadFailed": "فشل تحميل تحليلات المحفظة. أعد تشغيل واجهة برمجة التطبيقات وقم بتشغيل البرامج النصية/init_db.py إذا كانت قاعدة البيانات مفقودة.",
+    "productsLoadFailed": "تعذر تحميل المنتجات. ",
+    "engagementLoadFailed": "تعذر تحميل مركز المشاركة",
+    "adminLoadFailed": "تعذر تحميل بيانات المسؤول",
+    "customersLoadFailed": "تعذر تحميل العملاء",
+    "invalidCustomerId": "مُعرّف عميل غير صالح",
+    "customerNotFound": "لم يُعثر على المستلم",
+    "boundary": {
+      "title": "حدث خطأ ما",
+      "hint": "جرب التحديث الصعب. إذا استمر هذا، فأعد تشغيل التطبيق وتأكد من تطابق الواجهة الأمامية/المسافة مع إصدار واجهة برمجة التطبيقات (API) قيد التشغيل.",
+      "reload": "إعادة تحميل الصفحة"
+    },
+    "assistantUnreachable": "تعذر الوصول إلى المساعد. تأكد من أن واجهة برمجة التطبيقات (API) قيد التشغيل."
+  },
+  "cohort": {
+    "fullBook": "كتاب كامل",
+    "filteredCohort": "المجموعة التي تمت تصفيتها",
+    "filteredBy": "تمت التصفية بواسطة \"{{label}}\"",
+    "fullActiveBook": "دفتر عملاء نشط بالكامل",
+    "segments": {
+      "customers_all": "جميع العملاء",
+      "with_policies": "مع السياسات",
+      "with_foreclosures": "مع حبس الرهن",
+      "with_investments": "مع الاستثمارات",
+      "with_insurance_status": "الحالة التأمينية :",
+      "with_market_products": "مع منتجات السوق"
+    }
+  },
+  "business": {
+    "domainFilter": {
+      "helperAnalytics": "انقر على بطاقة لتصفية التحليلات. اضغط مرة أخرى للمسح.",
+      "helperCustomerList": "اضغط على بطاقة لتصفية قائمة العملاء. اضغط مرة أخرى للمسح.",
+      "refreshedAt": "عدد مرات التحديث {{time}}",
+      "policyFoot": "{{active}} ACTIVE · AVG {{avg}} / CUSTOMER",
+      "allBookFoot": "{{policies}} سياسات · {{active}} نشطة"
+    },
+    "cohort": {
+      "filteredBadge": "المجموعة التي تمت تصفيتها",
+      "vsBookLead": "هذه الشريحة هي {{share}} من إجمالي قيمة العميل في الكتاب الكامل (المرجع أدناه).",
+      "shareOfBook": "{{pct}}% من الكتاب"
+    },
+    "portfolio": {
+      "sectionGrowth": "توقعات نمو الكتب وتغيرها",
+      "ledeFiltered": "{{caption}} — يتم إعادة تحميل مؤشرات الأداء الرئيسية والرسوم البيانية عند تغيير بطاقات النظرة العامة أعلاه.",
+      "ledeFull": "مؤشرات الأداء الرئيسية للمحفظة مع توقعات الدوران المتوافقة مع الصناعة على القيمة الإجمالية للعملاء.",
+      "bookHistory": "تاريخ الكتاب: {{range}}.",
+      "mobileLead": "{{caption}} · الحالة المعيارية لكل بطاقة",
+      "objectivesTitle": "اتجاهات الأهداف الاستراتيجية",
+      "objectivesDefaultNote": "تم تعيين الاتجاهات لنمو المدخرات على المدى الطويل، وزخم قسط التأمين، ومشاركة العملاء.",
+      "updating": "جارٍ تحديث التحليلات...",
+      "retentionRunScoring": "قم بتشغيل تسجيل سرعة الدوران لتقدير معدل انقضاء المحفظة.",
+      "retentionSub": "فاصل زمني مرجح لمدة 12 شهرًا__PH0 __% · HIGH__ PH1 __ · MED __PH2 __ · LOW {{low}}",
+      "valueAtRiskSub": "Σ قيمة العميل × احتمال الانقضاء (مرجح بالمستوى عندما تكون درجة غسل الأموال مفقودة)",
+      "policyRecordsSub": "{{active}} ACTIVE · AVG {{avg}} / CUSTOMER",
+      "highRiskShareSub": "__ PH0__ العملاء ذوو المخاطر العالية",
+      "retentionQueueHint": "فتح قائمة انتظار الاستبقاء في المساعد →",
+      "kpi": {
+        "totalBookValue": "القيمة الدفترية الإجمالية",
+        "retentionForecast": "الاحتفاظ لمدة 12 شهرًا (توقعات)",
+        "valueAtChurnRisk": "القيمة المعرضة لمخاطر التقلب",
+        "activeCustomers": "العملاء النشطين",
+        "policyRecords": "السياسات و السجلات",
+        "avgCustomerValue": "قيمة العميل",
+        "highRiskBookShare": "مشاركة الكتب عالية المخاطر",
+        "bookGrowthHistory": "نمو الكتاب (التاريخ)",
+        "avgReviewScore": "النتيجة الإجمالية للمراجعة"
+      },
+      "reviewScoreValue": "{{avg}} / 5",
+      "reviewScoreSub": "{{count}} مراجعة التقييمات في هذا الكتاب",
+      "reviewScoreSubEmpty": "لا توجد تقييمات مراجعة في هذه المجموعة حتى الآن"
+    },
+    "kpi": {
+      "objective": "الهدف: {{target}}",
+      "thermo": {
+        "atOrBelow": "عند الهدف أو أقل منه",
+        "ofLimit": "{{pct}}% من الحد",
+        "ofObjective": "{{pct}}% من الهدف",
+        "a11y": "{{status}} — {{detail}}"
+      }
+    },
+    "vsBookStats": {
+      "customers": "العملاء",
+      "totalBookValue": "القيمة الدفترية الإجمالية",
+      "policyRecords": "السياسات و السجلات",
+      "avgCustomerValue": "قيمة العميل"
+    },
+    "historyMonths": "{{first}} – {{last}} ({{count}} months)"
+  },
+  "mobile": {
+    "focusTitle": {
+      "business": "مؤشرات الأداء الرئيسية للأعمال",
+      "customers": "العملاء",
+      "customerProfile": "الملف الشخصي للعميل",
+      "products": "المنتجات",
+      "engagement": "المشاركة",
+      "admin": "الإدارة",
+      "details": "التفاصيل"
+    },
+    "backToAssistant": "المساعد"
+  },
+  "charts": {
+    "common": {
+      "loading": "جار التحميل",
+      "empty": "لا توجد بيانات لهذه المجموعة حتى الآن.",
+      "interactiveHint": "انقر على نقطة للتعمق في العملاء لهذا الشهر.",
+      "forecast": "التوقعات",
+      "axisLeft": " متبقية",
+      "axisRight": "[ترجمة المصطلح: Right]"
+    },
+    "bookValue": {
+      "title": "القيمة الدفترية",
+      "subtitle": "إجمالي قيمة العميل مقسومة على الاستثمارات مقابل التغطية والادخار.",
+      "subtitleCohort": "خطوط ثابتة = مجموعة مرشحة ؛ رمادي متقطع = دفتر عملاء نشط بالكامل.",
+      "empty": "لا يوجد تاريخ كتاب لهذه المجموعة.",
+      "totalBook": "إجمالي الدفتر",
+      "cohortTotalBook": "دفتر إجمالي المجموعة",
+      "investments": "الاستثمارات",
+      "coverageSavings": "التغطية والادخار",
+      "fullBookRef": "الكتاب الكامل (المرجع)"
+    },
+    "churnHorizon": {
+      "title": "Churn Horizon",
+      "subtitle": "القيمة المتوقعة المعرضة للخطر حسب الشهر (انقضاء مرجح للمستوى).",
+      "empty": "لا توجد بيانات أفق تموج لهذه المجموعة.",
+      "legendFullBookRef": "الكتاب الكامل (المرجع)",
+      "legendCohortBookActual": "دفتر المجموعات (فعلي)",
+      "legendTotalBookActual": "إجمالي الدفاتر (الفعلية)",
+      "legendExpectedRetained": "القيمة المحتجزة المتوقعة",
+      "legendValueAtRisk": "القيمة المعرضة لمخاطر التقلب",
+      "legendProjectedBook": "الكتاب المتوقع (التوقعات)",
+      "tooltipCohortTotalBook": "إجمالي حجز الفوج",
+      "tooltipExpectedRetained": "المتوقع الاحتفاظ به",
+      "tooltipValueAtRisk": "القيمة المعرضة للمخاطر",
+      "tooltipFullBookRef": "الكتاب الكامل (المرجع)",
+      "tooltipRetention": "الاحتفاظ {{pct}}"
+    },
+    "investmentReturns": {
+      "title": "العائدات الإستثمارية",
+      "subtitle": "العائد التراكمي %( line, left) والعائد على أساس شهري %( bar, right). البارات تحت الصفر هي خسائر شهرية.",
+      "subtitleFallback": "رصيد الاستثمار عندما لا يكون سجل العائد متاحًا.",
+      "empty": "لا يوجد سجل استثماري لهذه المجموعة.",
+      "legendCumulative": "العائد التراكمي",
+      "legendPeriod": "عودة أيام الفترة:",
+      "legendBalance": "رصيد الاستثمار",
+      "legendCohortBalance": "رصيد استثمار المجموعة",
+      "legendBookCumulative": "العائد التراكمي الكامل للكتاب (المرجع)"
+    },
+    "premiumMomentum": {
+      "title": "السياسات النشطة والقسط",
+      "subtitle": "القسط الشهري كخط (المحور الأيسر )؛ متوسط السياسات لكل عميل شهريًا كأعمدة (المحور الأيمن).",
+      "empty": "لا يوجد اتجاه متميز للسياسة للكتاب النشط حتى الآن.",
+      "legendPremium": "القسط الشهري",
+      "legendAvgPolicies": "سياسات المتوسط/ العميل",
+      "tooltipAvgPolicies": "متوسط السياسات / العميل: {{avg}}",
+      "tooltipPolicyCount": "{{count}} سياسات نشطة (إجمالي الحجز)"
+    },
+    "savingsAum": {
+      "title": "المدخرات طويلة الأجل (AUM)",
+      "subtitle": "عدد الأصول الخاضعة للإدارة (يسار) وسياسة التوفير (يمين) — سياسات متعددة لكل مدخر أمر طبيعي.",
+      "empty": "لا يوجد سجل لقطات التوفير للكتاب النشط حتى الآن.",
+      "legendAum": "التراكم (الأصول الخاضعة للإدارة)",
+      "legendSavingsPolicies": "سياسات التوفير",
+      "tooltipSavingsPolicies": "{{count}} سياسات التوفير"
+    },
+    "engagementObjective": {
+      "title": "إشراك العملاء",
+      "subtitle": "متوسط درجة المراجعة الشهرية (1–5 نجوم) للكتاب أو المجموعة المختارة.",
+      "empty": "لا توجد تقييمات مراجعة للكتاب النشط حتى الآن.",
+      "legend": "ْنقاط المراجعة المتوسطة",
+      "tooltipAvg": "المتوسط: {{avg}} / 5",
+      "tooltipCount": "{{count}} تقييمات"
+    },
+    "customerValue": {
+      "title": "قيمة العميل",
+      "subtitle": "الخطوط الصلبة هي لقطات للمستودع. إسقاط متقطع: هفوات عالية المخاطر إلى {{zeroAmount}} في غضون 3 أشهر ؛ متوسط يمتد التاريخ الحديث ؛ منخفض يمتد التاريخ الكامل.",
+      "loading": "جارٍ تحميل قيمة العميل...",
+      "empty": "لا يوجد سجل قيمة لهذا العميل.",
+      "refreshing": "جارٍ تحديث المخطط...",
+      "latestTotal": "مجموع آخر 12",
+      "vsStart": "مقابل البدء",
+      "projected": "__ PH0__ أشهر المتوقعة",
+      "lapseHigh": "إسقاط الفاصل الزمني عالي المستوى",
+      "legendActual": "القيمة الإجمالية الفعلية",
+      "legendProjected": "المتوقعة (قواعد المستوى)",
+      "legendInvestmentAcc": "تراكم الاستثمار",
+      "legendCoverageSavings": "التغطية والادخار (حالة البوليصة)",
+      "forecastLegendHighLapse": "مخاطر عالية — انقضاء إلى {{zeroAmount}} (3 أشهر)",
+      "forecastLegendMedium": "مخاطر متوسطة — اتجاه من التاريخ الحديث",
+      "forecastLegendLow": "مخاطر منخفضة — اتجاه من التاريخ الكامل",
+      "churnTierLabel": "طبقة الزبد {{tier}}",
+      "lapseWithin3Months": "تنقضي في غضون 3 أشهر",
+      "atRisk": "معرض للخطر {{amount}}",
+      "lapsePeriod": "· Lapse {{period}}",
+      "chartA11yWithForecast": "قيمة العميل مع مرور الوقت مع توقع التقلبات",
+      "chartA11y": "قيمة العميل بمرور الوقت"
+    }
+  },
+  "customer": {
+    "recent": {
+      "title": "شوهد مؤخراً&#10;"
+    },
+    "homeLink": "الصفحة الرئيسية للعميل",
+    "back": {
+      "engagement": "← العودة إلى المشاركة",
+      "list": "← العودة إلى العملاء",
+      "business": "← العودة إلى العمل"
+    },
+    "link": {
+      "engagementHub": "العودة إلى مركز المشاركة",
+      "list": "العودة إلى قائمة العملاء",
+      "businessPortfolio": "المحفظة في الأعمال"
+    },
+    "mobile": {
+      "summaryLine": "{{city}} · {{policies}} سياسات · {{value}}"
+    },
+    "churn": {
+      "scoredAt": "تم تسجيل النتيجة {{date}}",
+      "notScored": "لم توضع علامة حتى الآن",
+      "likelihoodTitle": "احتمالية الدوران {{pct}}",
+      "tier": {
+        "HIGH": "مرتفع",
+        "MEDIUM": "متوسط",
+        "LOW": "منخفضة"
+      },
+      "badgeA11y": "مخاطر الاندفاع {{tier}}، الاحتمال {{pct}}"
+    },
+    "privacyNotice": "يتم عرض المدينة وآخر تسجيل دخول بالكامل ؛ يتم إخفاء حقول معلومات التعريف الشخصية الأخرى في هذا العرض التوضيحي.",
+    "profile": {
+      "type": "النوع",
+      "birthDate": "تاريخ الميلاد",
+      "maritalStatus": "الحالة الاجتماعية",
+      "address": "<g id=\"Bold\"><g id=\"Bold\">العنوان</g></g>",
+      "communication": "<g id=\"Bold\">الاتصال/التواصل</g>",
+      "lastInteraction": "آخر تفاعل"
+    },
+    "engagementHint": {
+      "prefix": "مقترح من مركز المشاركة:"
+    },
+    "tabs": {
+      "policies": "السياسات",
+      "foreclosures": "حبس الرهن",
+      "investments": "الاستثمارات",
+      "interactions": "التفاعلات",
+      "listLabel": "أقسام سجلات العملاء"
+    },
+    "policies": {
+      "title": "السياسات",
+      "hint": "انقر على سياسة لتصفية لقطات الاستثمار.",
+      "columns": {
+        "number": "الرقم",
+        "type": "النوع",
+        "status": "الحالة",
+        "active": "نشط",
+        "monthlyPremium": "القسط الشهري"
+      },
+      "rowA11y": "السياسة {{number}}، انقر لتصفية الاستثمارات",
+      "rowSelectedA11y": "السياسة {{number}}، المحددة لفلتر الاستثمار"
+    },
+    "foreclosures": {
+      "title": "حبس الرهن العقاري والأعباء",
+      "empty": "لا توجد سجلات لحبس الرهن.",
+      "columns": {
+        "proceeding": "فداءا لوالدي",
+        "amount": "المبلغ",
+        "date": "التاريخ",
+        "portfolio": "<g id=\"Bold\">المتحفظة</g>"
+      }
+    },
+    "interactions": {
+      "title": "الجدول الزمني للتفاعل",
+      "lede": "أحداث اصطناعية متعددة القنوات من طبقة مشاركة المستودع.",
+      "stats": {
+        "last90d": "آخر 90 يومًا: {{count}} أحداث",
+        "avgReview": "متوسط المراجعة: {{avg}}/5",
+        "openAgent": "عناصر الوكيل المفتوحة: {{count}}"
+      },
+      "empty": "لم يتم تسجيل أي أحداث تفاعل.",
+      "eventType": {
+        "review": "المراجعة",
+        "agentQuestion": "سؤال الوكيل",
+        "webSearch": "بحث على الإنترنت"
+      },
+      "signal": {
+        "stars": "{{rating}}/5 نجوم",
+        "resolved": "تم الحل",
+        "open": "إجابة مفتوحة",
+        "helpSearch": "المساعدة في البحث",
+        "productSearch": "البحث عن منتج"
+      }
+    },
+    "investments": {
+      "title": "أحدث لقطات الاستثمار",
+      "policyFilter": "صفحة تصفية النهج",
+      "empty": "لا توجد لقطات استثمار لهذا الاختيار.",
+      "columns": {
+        "policy": "السياسات",
+        "fund": "البيان",
+        "snapshot": "لمحة سريعة:",
+        "accumulation": "التجميع",
+        "ytdPl": "الربح/الخسارة منذ بداية العام"
+      }
+    },
+    "directory": {
+      "title": "العملاء",
+      "titleCompact": "مطابقة العملاء",
+      "chartFilter": {
+        "prefix": "لقطة من الرسم البياني:",
+        "clear": "مسح عامل تصفية التاريخ",
+        "metrics": {
+          "total": "القيمة الدفترية الإجمالية",
+          "investment": "رصيد الاستثمار",
+          "coverage": "التغطية والوفورات",
+          "at_risk": "القيمة المعرضة لخطر الاختناق (احسب × احتمال الاختناق عند اللقطة)"
+        }
+      },
+      "cityFilter": {
+        "prefix": "مدينة",
+        "clear": "مسح عامل تصفية المدينة"
+      },
+      "productFilter": {
+        "prefix": "فلتر المنتج: type {{code}}",
+        "clear": "مسح فلتر المنتج"
+      },
+      "cohortFilter": {
+        "prefix": "تصفية:",
+        "clear": "مسح عامل التصفية"
+      },
+      "allCohort": "عرض جميع العملاء الحاليين في هذه المجموعة",
+      "sort": {
+        "label": "تصنيف حسب",
+        "options": {
+          "churn_risk": "تمرين الخفقان، ثم القيمة",
+          "customer_value": "القيمة، ثم التقلب",
+          "name": "ترتيب (A-Z)",
+          "policy_count": "عدد البوليصة",
+          "investment_count": "مسارات الاستثمار"
+        },
+        "order": {
+          "valueDesc": "أعلى قيمة أولاً ↓",
+          "valueAsc": "أدنى قيمة أولاً ↑",
+          "riskDesc": "عالية المخاطر أولاً ↓",
+          "riskAsc": "منخفضة المخاطر أولاً ↑",
+          "defaultDesc": "الأعلى أولاً ↓",
+          "defaultAsc": "الأدنى أولاً ↑"
+        }
+      },
+      "search": {
+        "label": "بحث",
+        "placeholder": "الاسم أو معرّف العميل"
+      },
+      "view": {
+        "label": "المخطط",
+        "grid": "البطاقات",
+        "table": "[ترجمة المصطلح: Table]"
+      },
+      "updating": "جارٍ تحديث البطاقات/الجدول...",
+      "empty": "لا يوجد عملاء مطابقون",
+      "pagination": {
+        "summaryAll": "عرض جميع {{total}} العملاء",
+        "summaryRange": "عرض {{from}}–{{to}} من {{total}}",
+        "perPage": "للصفحة",
+        "previous": "السابق",
+        "next": "[ترجمة المصطلح: Next]",
+        "pageOf": "الصفحة {{page}} من {{pages}}"
+      }
+    },
+    "table": {
+      "empty": "لا يوجد عملاء يطابقون عامل التصفية هذا.",
+      "columns": {
+        "name": "الاسم",
+        "city": "المـــــــــــــدينة",
+        "value": "القيمة",
+        "churn": "التناقص",
+        "policies": "السياسات",
+        "investments": "الاستثمارات",
+        "lastLogin": "آخر تسجيل دخول",
+        "id": "ID",
+        "email": "بريد إلكتروني",
+        "mobile": "هاتف محمول"
+      }
+    },
+    "card": {
+      "rankA11y": "الرتبة {{rank}}",
+      "value": "قيمة العميل",
+      "policies": "السياسات",
+      "investments": "الاستثمارات",
+      "lastLogin": "آخر تسجيل دخول",
+      "churnScored": "تم تسجيل معدل الدوران",
+      "a11ySummary": "ملخص العميل",
+      "reviewsNone": "لا توجد تقييمات للمراجعة حتى الآن",
+      "reviewsAvg": "{{avg}} AVERAGE · {{count}} تقييمات",
+      "reviewsAvgShort": "{{avg}} AVERAGE",
+      "reviewsStarsA11y": "متوسط تقييم المراجعة {{avg}} من أصل 5 تقييمات من __PH1 __",
+      "reviewsStarsA11yNoCount": "متوسط تقييم المراجعة __PH0 __ من 5"
+    },
+    "insights": {
+      "title": "رؤى الذكاء الاصطناعي وأفضل إجراء تالي",
+      "refresh": "تحديث الرؤى",
+      "loadingLlm": "الاتصال بـ __PH0 __ باستخدام مستودع هذا العميل وبيانات التفاعل...",
+      "loadingGeneric": "توليد رؤى من بيانات المستودع والتفاعل...",
+      "streamPreview": "تكوين البصيرة...",
+      "loadingLocal": "إنشاء إرشادات مع المستشار المحلي المدمج (لم يتم تكوين LLM).",
+      "idleHint": "يمكن للتوصيات القابلة للتنفيذ فتح مسودة من بيانات الحساب ؛ تتم محاكاة الإرسال في هذا العرض التوضيحي.",
+      "generatedBy": "تم إنشاء هذه الرؤى بواسطة __ PH0 ____ PH1 __ من الملف التعريفي للعميل وسياساته وتفاعلاته ودرجة الأداء.",
+      "fallbackReason": "تم تكوين__ PH0 __ ولكن هذه الاستجابة استخدمت المستشار المحلي. السبب: {{reason}}",
+      "fallbackGeneric": "عرض المستشار المحلي لهذا الرد — __ PH0__ لم يرد على إجابة قابلة للاستخدام. جرب تحديث الرؤى.",
+      "localOnlyBedrock": "Showing the built-in local advisor. Configure AWS credentials and CUSTOMER360_BEDROCK_* variables, or set an LLM provider under Data and Admin.",
+      "localOnlyPrivateAi": "Showing the built-in local advisor. Configure PrivateAI under Data and Admin → Configuration → LLM provider.",
+      "localOnlyGeneric": "عرض المستشار المحلي المدمج. تكوين موفر LLM تحت موفر Data and Admin → Configuration → LLM.",
+      "loadError": "تعذر تحميل الرؤى",
+      "focusChurn": "التركيز على الدوران",
+      "focusUpsell": "التركيز على النمو / الارتقاء بالبيع",
+      "modelTitle": "{{brand}} رقم الموديل",
+      "poweredBy": "مدعوم من {{brand}}",
+      "localAdvisor": "مستشار محلي",
+      "churnTier": "طبقة الزبد: {{tier}}",
+      "modelId": "الطراز: {{id}}",
+      "cachedCopy": "نسخة البيانات المخزنة مؤقتا",
+      "generatedAt": "تم إنشاؤه: {{at}}",
+      "recommendedActions": "الإجراءات المقترحة.",
+      "guidanceHeading": "مشورة شخصية",
+      "outreachHeading": "التوعية المقترحة",
+      "bestNextTouch": "أفضل لمسة تالية",
+      "llmError": "{{brand}} خطأ: {{reason}}",
+      "envHintBedrock": "To enable {{brand}}-generated text, set AWS credentials and optional CUSTOMER360_BEDROCK_* variables (see .env.example).",
+      "envHintPrivateAi": "لتمكين النص الذي تم إنشاؤه بواسطة __ PH0 __، أكمل إعدادات مزود LLM ضمن البيانات والمشرف.",
+      "regionHint": "If this persists after Refresh, confirm model access in Bedrock and set CUSTOMER360_BEDROCK_REGION to your AWS region (e.g. us-east-1).",
+      "focusRetention": "التركيز على الاحتفاظ"
+    },
+    "outreach": {
+      "title": "مسودة التوعية",
+      "disclaimer": "تمت محاكاة الإرسال — لا توجد رسالة تغادر هذا المتصفح.",
+      "to": "إلى",
+      "email": "بريد إلكتروني",
+      "phone": "هاتف",
+      "channel": "القناة",
+      "subject": "الموضوع",
+      "body": "الجسم",
+      "cancel": "إلغاء",
+      "send": "إرسال (محاكاة)",
+      "sent": "تم تسجيل محاكاة الإرسال.",
+      "loadingDraft": "جارٍ إنشاء مسودة باستخدام {{brand}} من بيانات الحساب...",
+      "streaming": "جاري تأليف المسودة...",
+      "draftError": "تعذر إنشاء مسودة",
+      "sendFailed": "فشل إرسال المحاكاة",
+      "copyFailed": "تعذر نسخ hexdump إلى الحافظة.",
+      "notActionable": "غير قابل للتنفيذ.",
+      "triggeredBy": "تم التشغيل بواسطة",
+      "draftedBy": "صاغه {{brand}}",
+      "copy": "نسخ النص",
+      "copied": "تم النسخ",
+      "previewEmail": "مسودة البريد الإلكتروني ({{brand}})",
+      "previewSms": "مسودة رسالة نصية قصيرة ({{brand}})",
+      "previewCall": "نص الاتصال ({{brand}})"
+    },
+    "valueChart": {
+      "tooltipTotal": "الإجمالي {{amount}}",
+      "tooltipInvestments": "الاستثمارات {{amount}}",
+      "tooltipCoverage": "التغطية {{amount}}",
+      "predictedLapse": "الفاصل الزمني المتوقع — القيمة عند {{zeroAmount}}",
+      "projectedSuffix": "(متوقع)",
+      "legendActualFull": "القيمة الإجمالية للعميل (الفعلية)"
+    }
+  },
+  "engagement": {
+    "title": "المشاركة ونقاط الاتصال",
+    "lede": "إعطاء الأولوية للعملاء ذوي الميل الأعلى للتأثير على النتائج — المصنفين للتوعية.",
+    "domainFilter": {
+      "helper": "فلتر الفوج الاختياري (نفس بطاقات العمل)."
+    },
+    "summary": {
+      "touchpoints90": {
+        "label": "نقاط الاتصال (90 يوم)",
+        "sub": "{{count}} العملاء النشطون"
+      },
+      "digital90": {
+        "label": "الرقمي والوكيل",
+        "sub": "عمليات البحث على الويب وأسئلة الوكلاء"
+      },
+      "reviews90": {
+        "label": "المراجعات (90 يوم)",
+        "sub": "فعاليات صوت العملاء"
+      },
+      "openAgent": {
+        "label": "أسئلة مفتوحة للوكيل",
+        "sub": "يحتاج إلى حل في نافذة 90D"
+      }
+    },
+    "list": {
+      "title": "التأثير على قائمة الأولويات",
+      "titleMobile": "أعلى مستوى من التواصل",
+      "lede": "مرتبة حسب درجة التأثير (الميل × القيمة). عرض {{shown}} من {{total}}.",
+      "empty": "لا توجد فرص مشاركة تتطابق مع عامل التصفية هذا.",
+      "bookSuffix": "{{value}} BOOK"
+    },
+    "loading": "جارٍ تحميل فرص المشاركة...",
+    "influence": {
+      "label": "التأثير"
+    },
+    "a11y": {
+      "influenceTitle": "الميل إلى التأثير",
+      "influenceScore": "درجة التأثير {{score}} من أصل 100"
+    },
+    "touchpoints": {
+      "count90": "{{count}} نقاط اتصال (90 يوم)",
+      "webSearches": "__ PH0__ عمليات البحث على الويب",
+      "reviews": "{{count}} تقييمات",
+      "openQuestions": "{{count}} أسئلة مفتوحة",
+      "daysSince": "{{days}}d منذ آخر لمسة"
+    },
+    "action": {
+      "recommendedLabel": "الخطوة التالية الموصى بها",
+      "actChannel": "ACT — {{channel}}",
+      "viewTouchpoints": "عرض نقاط الاتصال"
+    },
+    "channel": {
+      "email": "بريد إلكتروني",
+      "phone": "هاتف",
+      "sms": "SMS"
+    },
+    "actions": {
+      "resolve_agent_question": {
+        "title": "حل سؤال الوكيل المفتوح",
+        "detail": "{{count}} سؤال(أسئلة) لم يتم حلها في آخر 90 يومًا — مكالمة أو رسالة بينما السياق جديد."
+      },
+      "retention_call": {
+        "title": "مكالمة الاحتفاظ (القناة دافئة)",
+        "detail": "مخاطر عالية ولكن نقاط اتصال حديثة — تعطي الأولوية لمحادثة استبقاء بشرية."
+      },
+      "reengagement_outreach": {
+        "title": "التواصل مع إعادة المشاركة",
+        "detail": "لا توجد جهة اتصال حديثة — أرسل تسجيل وصول مخصص (بريد إلكتروني أو رسالة نصية قصيرة) وقدم مراجعة رقمية."
+      },
+      "invite_review": {
+        "title": "قم بدعوة التعليقات بعد البحث الرقمي",
+        "detail": "يبحث العميل عن المنتجات/المساعدة عبر الإنترنت — اطلب مراجعة سريعة أو نبض رضا."
+      },
+      "relationship_review": {
+        "title": "جدولة مراجعة العلاقة",
+        "detail": "مشاركة مستقرة — احجز مراجعة استباقية لمناقشة أهداف التغطية والادخار."
+      }
+    }
+  },
+  "products": {
+    "lede": "منتجات السياسة مجمعة حسب الفئة — تعكس كثافة الخلية عدد العملاء في المجموعة المحددة.",
+    "mobile": {
+      "title": "أعلى منتجات"
+    },
+    "filter": {
+      "banner": "عرض {{segment}}{{city}}",
+      "clear": "مسح الفلاتر"
+    },
+    "legend": {
+      "highest": "أعلى معدل امتصاص",
+      "strong": "قوي",
+      "moderate": "متوسط",
+      "lighter": "أخف"
+    },
+    "a11y": {
+      "legend": "كثافة عدد العملاء",
+      "productCard": "{{name}}, {{count}} CUSTOMERS, {{policies}} ACTIVE POLICES"
+    },
+    "filters": {
+      "cohort": "مجموعة العملاء",
+      "city": "المـــــــــــــدينة",
+      "allCities": "جميع المدن"
+    },
+    "loading": "جارٍ تحميل كتالوج المنتج...",
+    "customersCount": "{{count}} العملاء",
+    "activePoliciesCount": "{{count}} سياسات نشطة",
+    "classStats": "{{customers}} CUSTOMERS · {{policies}} سياسات",
+    "empty": "لا توجد منتجات بوليصة في المستودع.",
+    "classes": {
+      "life_protection": "الحياة والحماية",
+      "health": "الصحة والتكميلي",
+      "property": "الممتلكات والابتدائية",
+      "long_term_savings": "الادخار طويل الأجل"
+    }
+  },
+  "admin": {
+    "mobile": {
+      "snapshotTitle": "لمحة عن المستودع",
+      "flags": "أعلام الجودة:",
+      "healthFlags": "أعلام الصحة:",
+      "desktopHint": "افتح عرض سطح المكتب لخريطة المخطط ومعايير مؤشرات الأداء الرئيسية."
+    },
+    "title": "مسؤول المستودع والبيانات",
+    "lede": "جرد الجدول، والطوابع الزمنية للتحميل، وفحوصات الاكتمال، وتكوين أهداف مؤشرات الأداء الرئيسية.",
+    "loading": "جارٍ تحميل بيانات تعريف المسؤول...",
+    "health": {
+      "title": "سلامة الأنظمة",
+      "lede": "يتحقق وقت التشغيل من واجهة برمجة التطبيقات (API)، واتصال المستودع، وذاكرة التخزين المؤقت، ونضارة تسجيل المخاض.",
+      "attentionNote": "{{count}} الفحص(الفحوصات) بحاجة إلى عناية (تحذير أو حرج)."
+    },
+    "kpi": {
+      "databaseFile": {
+        "label": "ملف قاعدة بيانات"
+      },
+      "warehouseLoaded": {
+        "label": "آخر تحميل للمستودع"
+      },
+      "cataloguedTables": {
+        "label": "الجداول المفهرسة"
+      },
+      "qualityFlags": {
+        "label": "أعلام الجودة",
+        "sub": "فحوصات الاكتمال غير المقبولة"
+      }
+    },
+    "tables": {
+      "title": "الجدول 1",
+      "lede": "يتم احتساب عدد الصفوف مباشرة من الواجهة الخلفية للمستودع التي تم تكوينها.",
+      "columns": {
+        "table": "[ترجمة المصطلح: Table]",
+        "layer": "[ترجمة المصطلح: Layer]",
+        "domain": "المجال",
+        "rows": "الصفوف",
+        "lastLoaded": "آخر تحميل",
+        "sourceJob": "وظيفة المصدر"
+      }
+    },
+    "schema": {
+      "title": "خريطة المخطط",
+      "lede": "Each card lists live SQLite columns for demo tables; join reference shows relationships.",
+      "joinReference": "الانضمام إلى المرجع",
+      "joinColumns": {
+        "from": "من",
+        "to": "إلى",
+        "join": "الانضمام",
+        "cardinality": "توصيف العلاقة"
+      }
+    },
+    "quality": {
+      "title": "الاكتمال والجودة"
+    },
+    "config": {
+      "title": "الإعداد والتهيئة",
+      "lede": "اتصال المستودع وأهداف مؤشرات الأداء الرئيسية للأعمال المستخدمة في صفحة الأعمال.",
+      "a11y": "تكوين المشرف",
+      "tabs": {
+        "warehouse": "الواجهة الخلفية للمستودع",
+        "llm": "مزود LLM",
+        "kpiBenchmarks": "معايير مؤشرات الأداء الرئيسية للأعمال",
+        "appearance": "المظهر والمواضيع",
+        "localization": "التوطين والإقليم"
+      }
+    },
+    "localization": {
+      "loading": "جارٍ تحميل إعدادات التوطين...",
+      "loadError": "تعذر تحميل إعدادات الترجمة",
+      "saveError": "تعذر حفظ إعدادات التوطين",
+      "saved": "تم حفظ إعدادات التوطين.",
+      "save": "حفظ التوطين",
+      "saving": "جارٍي الحفظ…",
+      "territoryLegend": "ملف تعريف منطقة العرض التوضيحي",
+      "territoryLede": "تتحكم المنطقة في العملة والمدن وسياق سوق LLM. وهي منفصلة عن لغة واجهة المستخدم وعن لغة البذور المستخدمة لنص التفاعل في المستودع.",
+      "useWarehouseTerritory": "استخدم المنطقة من المستودع المصنف ({{id}})",
+      "territoryLabel": "تجاوز ملف تعريف المنطقة",
+      "localeLegend": "لغة التطبيق",
+      "localeLede": "لغة واجهة المستخدم المفضلة للتسميات ومطالبات LLM. مخزنة في قاعدة بيانات المسؤول لجميع مستخدمي هذا النشر.",
+      "localeLabel": "لغة واجهة المستخدم",
+      "localeDefault": "الموقع الأساسي للإقليم",
+      "mismatchWarning": "تم تصنيف المستودع لـ {{warehouse}} ولكن تجاوز المشرف هو {{admin}}. يتبع سياق العملة و LLM ملف تعريف المسؤول ؛ قد لا تزال أسماء المدن في البيانات تتطابق مع منطقة البذور.",
+      "lastUpdated": "آخر تحديث {{date}}",
+      "warehouseSeedLanguage": "لغة نسخ تفاعل المستودع: {{language}}",
+      "reseedLegend": "مستودع ريسيد",
+      "reseedLede": "Rebuild the SQLite warehouse with a chosen region (geography) and seed language. When an LLM provider is configured, names, cities, and interaction text are generated for that pair; otherwise cached or built-in profile data is used. This replaces existing customer data.",
+      "reseedRegionLabel": "منطقة البذور",
+      "reseedLanguageLabel": "لغة البذور",
+      "reseedButton": "مستودع ريسيد",
+      "reseeding": "إعادة البذر",
+      "reseedConfirm": "استبدال جميع بيانات المستودع بالمنطقة \"{{region}}\" ولغة البذور \"__PH1 __ \"؟",
+      "reseedDone": "مستودع أعيدت زراعته لـ __PH0 __ مع {{language}} COPY ({{count}} CUSTOMERS).",
+      "reseedError": "فشل إعادة زرع المستودع"
+    },
+    "llm": {
+      "lede": "Choose the backend for customer insights, outreach drafts, and the executive assistant. Bedrock remains the default; PrivateAI uses a stored API token (never shown after save).",
+      "loading": "جارٍ تحميل تكوين LLM...",
+      "loadError": "تعذر تحميل إعدادات LLM",
+      "loadTimeout": "انتهت مهلة تحميل إعدادات LLM. أعد تشغيل واجهة برمجة التطبيقات إذا قمت بنشرها مؤخرًا، ثم أعد المحاولة.",
+      "retry": "أعد المحاولة",
+      "saveError": "يمكن أن ليس حفظ خصائص.",
+      "saved": "تم حفظ التهيئة.",
+      "save": "حفظ إعدادات LLM",
+      "saving": "جارٍي الحفظ…",
+      "test": "موفر الاختبار",
+      "testing": "<g id=\"Bold\">الاختبار</g>",
+      "testFailed": "فشل اختبار مقدم الخدمة",
+      "providerLegend": "مزود الخدمة النشط",
+      "providers": {
+        "bedrock": "Amazon Bedrock (default)",
+        "privateAi": "PrivateAI"
+      },
+      "bedrockSection": "تجاوزات نموذج حجر الأساس",
+      "bedrockHint": "AWS credentials stay in the environment or instance profile. Override region and model ID here when needed.",
+      "bedrockRegion": "منطقة حجر الأساس",
+      "bedrockModelId": "معرف الطراز",
+      "privateAiSection": "PrivateAI Endpoint",
+      "privateAiBaseUrl": "الرابط الأساس (URL)",
+      "privateAiModelId": "معرف الطراز",
+      "privateAiToken": "رمز API",
+      "tokenPlaceholderEmpty": "لصق رمز API المميز",
+      "tokenHintSet": "تم تخزين الرمز المميز بالفعل. اترك هذا الحقل فارغًا للاحتفاظ به، أو أدخل رمزًا جديدًا لاستبداله.",
+      "clearToken": "إزالة رمز واجهة برمجة التطبيقات المخزن",
+      "samplingSection": "حدود الجيل (جميع مقدمي الخدمات)",
+      "maxTokens": "أقصى عدد للعملات",
+      "temperature": "درجة الحرارة"
+    },
+    "datasource": {
+      "title": "الواجهة الخلفية للمستودع",
+      "modeLegend": "وضع الواجهة الخلفية",
+      "sqlite": "SQLite file (demo)",
+      "trino": "ترينو / جبل جليدي",
+      "sqlitePath": "SQLite Path",
+      "trinoHost": "رابط Trino JDBC",
+      "catalog": "الكتالوج ",
+      "schema": "مخطط",
+      "icebergRest": "رابط كتالوج Iceberg REST",
+      "save": "حفظ التكوين",
+      "testConnection": "اختبار الاتصال",
+      "saving": "جارٍي الحفظ…",
+      "saved": "تم حفظ التهيئة.",
+      "error": "ERR لا يمكن حفظ التكوين.",
+      "lastUpdated": "آخر تحديث {{date}}",
+      "loadingConfig": "جارٍ تحميل تكوين الواجهة الخلفية...",
+      "backendTypeLegend": "نوع الواجهة الخلفية",
+      "sqliteDefault": "SQLite (default)",
+      "cdwJdbc": "Cloudera Data Warehouse (JDBC)",
+      "lakehouseIceberg": "ليك هاوس (جبل جليدي)",
+      "sqliteFilePath": "SQLite File Path",
+      "jdbcUrl": "رابط JDBC",
+      "cdwHostOptional": "مضيف مخلفات البناء والهدم (اختياري إذا تم تعيين عنوان URL لـ JDBC)",
+      "port": "الميناء",
+      "user": "المستخدم",
+      "password": "[ترجمة المصطلح: Password]",
+      "passwordPlaceholder": "•••••• (دون تغيير إذا كان فارغًا)",
+      "useTlsTrino": "استخدم TLS لاختبار Trino HTTP",
+      "icebergRestUri": "رابط كتالوج Iceberg REST",
+      "catalogName": "اسم الكتالوج",
+      "namespace": "مساحة الاسم",
+      "loadError": "تعذر تحميل إعدادات مصدر البيانات",
+      "saveError": "ERR لا يمكن حفظ التكوين.",
+      "testError": "فشل اختبار الاتصال",
+      "testOk": "OK",
+      "testFailedShort": "فشل"
+    },
+    "kpiBenchmarks": {
+      "title": "معايير مؤشرات الأداء الرئيسية للأعمال",
+      "lede": "الأهداف الموضحة في بطاقات مؤشرات الأداء الرئيسية للمحفظة (مقياس الحرارة والخط الموضوعي).",
+      "columns": {
+        "kpi": "KPI",
+        "target": "المستهدف",
+        "unit": "الوحدة",
+        "direction": "DIRECTION  ·  دايركشن",
+        "preview": "معاينة"
+      },
+      "help": "يتم تخزين القيم في بيانات تعريف المسؤول وتطبيقها على تحميل المحفظة التالي.",
+      "preview": "معاينة",
+      "save": "حفظ المعايير",
+      "saving": "جارٍي الحفظ…",
+      "saved": "تم حفظ المعايير.",
+      "placeholderAuto": "تلقائي",
+      "loadError": "تعذر تحميل معايير مؤشرات الأداء الرئيسية",
+      "saveError": "فشل الحفظ",
+      "previewAuto": "تلقائي (من المحفظة)",
+      "previewLabel": "Preview (معاينة):",
+      "enabledColumn": "تفعيل",
+      "enabledA11y": "تمكين {{label}}",
+      "amberHelpHigher": "الكهرمان عندما يكون هذا الجزء على الأقل من الهدف (على سبيل المثال 0.85 = 85 ٪).",
+      "amberHelpLower": "الكهرمان حتى هذا المضاعف للهدف (على سبيل المثال 1.2 = 20 ٪ فوق الحد).",
+      "direction": {
+        "higher": "الأفضلية للقيم المرتفعة",
+        "lower": "الأفضلية للقيم المنخفضة"
+      },
+      "unitKind": {
+        "money": "المال (شيكل)",
+        "integer": "رقم كلي",
+        "ratio": "النسبة (0–1)",
+        "percent": "النسبة المئوية"
+      },
+      "descriptions": {
+        "total_book_value": "هدف المحفظة للقيمة الإجمالية للعميل (ILS).",
+        "active_customers": "هدف حجم الكتاب للعملاء الحاليين في النطاق.",
+        "annual_retention_rate_forecast": "معدل الاحتفاظ السنوي المستهدف (0–1، على سبيل المثال 0.92 = 92 ٪).",
+        "value_at_risk_12m": "الحد الأقصى المقبول للقيمة المعرضة للخطر لمدة 12 شهرًا (ILS).",
+        "avg_customer_value": "هدف متوسط قيمة العميل (ILS).",
+        "high_risk_book_pct": "الحد الأقصى للنسبة المئوية للحجز في المستوى المرتفع.",
+        "book_growth_pct": "هدف نمو الكتاب التاريخي (٪)."
+      }
+    },
+    "schemaDiagram": {
+      "cachesTitle": "ذاكرة التخزين المؤقت والتكوين والمرجع",
+      "cachesLede": "جداول واجهة برمجة التطبيقات وإعدادات المسؤول المحسوبة مسبقًا (تتم عمليات الانضمام المنطقية في الغالب عبر مفاتيح العميل أو على مستوى الكتاب).",
+      "legendPk": "مفتاح أساسي",
+      "legendFk": "الانضمام /عمود FK",
+      "legendArrows": "تتبع الأسهم بيانات تعريف علاقة واجهة برمجة التطبيقات ؛ مرر سطرًا لتسمية JOIN.",
+      "rowsSuffix": "صفوف",
+      "notCreated": "لم يتم الإنشاء",
+      "noColumns": "لا توجد أعمدة (الجدول مفقود في قاعدة البيانات)",
+      "tableSchemaA11y": "الجدول {{name}} المخطط"
+    },
+    "appearance": {
+      "modeLegend": "ضوء/ظلام",
+      "mode": {
+        "light": "الخفيفة",
+        "dark": "غامق"
+      },
+      "colorLegend": "لوحة التشكيل",
+      "colorLede": "تحاكي صبغات مساحة عمل الباستيل رسكنًا فاتحًا — يتبع الرأس والتنقل والروابط وعناصر التحكم الأساسية اللهجة.",
+      "colors": {
+        "blue": "أزرق (افتراضي)",
+        "purple": "أرجواني",
+        "green": "أخضر",
+        "red": "أحمر",
+        "teal": "اخضر مزرق"
+      }
+    },
+    "status": {
+      "ok": "OK",
+      "warn": "تحذير",
+      "critical": "حرج"
+    },
+    "checks": {
+      "customers": {
+        "label": "ئێستامانی پێبدەم.",
+        "summary": "لا يوجد عملاء حاليون في الأبعاد."
+      },
+      "email_coverage": {
+        "label": "البريد الإلكتروني مملوء",
+        "summary": "{{pct}}% من العملاء الحاليين لديهم بريد إلكتروني."
+      },
+      "mobile_coverage": {
+        "label": "متنقل مأهول",
+        "summary": "{{pct}}% من العملاء الحاليين لديهم رقم هاتف محمول."
+      },
+      "churn_coverage": {
+        "label": "درجات تشورن موجودة",
+        "summary": "يسجل Churn تغطية للكتاب النشط.",
+        "detail": "تشغيل نموذج 3_job - train - turn - model بعد بدء المستودع."
+      },
+      "metrics_cache": {
+        "label": "ذاكرة التخزين المؤقت لمقاييس القائمة",
+        "summary": "عدد صفوف ذاكرة التخزين المؤقت لمقاييس قائمة العملاء.",
+        "detail": "قم بالتحديث باستخدام البرامج النصية/refresh_api_caches.py إذا كانت قديمة."
+      },
+      "policy_coverage": {
+        "label": "العملاء الذين لديهم سياسة ≥1",
+        "summary": "حصة العملاء الذين لديهم سياسة واحدة على الأقل."
+      },
+      "scd_uniqueness": {
+        "label": "صف تيار واحد لكل معرف عميل",
+        "summary": "يحتوي كل معرف عميل على صف أبعاد حالي واحد على الأكثر."
+      },
+      "policy_referential": {
+        "label": "سياسات العملاء الحاليين المرجعيين",
+        "summary": "سياسات اليتيم غير مرتبطة بصف عميل حالي."
+      },
+      "investment_amounts": {
+        "label": "لقطات الاستثمار مع الرصيد",
+        "summary": "{{pct}}% من صفوف لقطة الاستثمار لديها تراكم غير صفري."
+      },
+      "churn_high_tier": {
+        "label": "المستوى المرتفع (إعلامي)",
+        "summary": "يصنف العملاء المخاطر العالية (النموذج الحالي)."
+      },
+      "api": {
+        "label": "Customer 360 API",
+        "summary": "يمكن الوصول إلى واجهة برمجة التطبيقات وتخدم طلب المشرف هذا.",
+        "detail": "نقطة نهاية الصحة: GET /API/HEALTH"
+      },
+      "data_source": {
+        "label": "تكوين الواجهة الخلفية للمستودع"
+      },
+      "database": {
+        "label": "SQLite Warehouse",
+        "detail": "Run 2_job-init-database or python3 -m customer360.seed."
+      },
+      "llm": {
+        "label": "مزود LLM",
+        "detail": "Configure Bedrock via AWS credentials or choose PrivateAI under Data and Admin → Configuration → LLM provider."
+      },
+      "churn_model": {
+        "label": "تسجيل المردود",
+        "detail": "تشغيل نموذج 3_job - train - turn - model بعد بدء المستودع."
+      }
+    }
+  },
+  "assistant": {
+    "title": "مساعد تنفيذي",
+    "shortTitle": "المساعد",
+    "lede": {
+      "phone": "اسأل عن الكتاب، ثم افتح رابطًا لتركيز تلك الصفحة على هاتفك.",
+      "desktop": "اسأل عن الكتاب ؛ تغير الروابط العرض الرئيسي أو تفتح قائمة انتظار الاستبقاء."
+    },
+    "poweredBy": {
+      "configured": "الواجهة الخلفية النشطة للماجستير: {{brand}}.",
+      "rules": "لم يتم تكوين LLM — باستخدام القواعد المضمنة فقط."
+    },
+    "tabs": {
+      "conversation": "المحادثة",
+      "retention": "قائمة انتظار الاحتفاظ",
+      "listA11y": "اللوحات المساعدة"
+    },
+    "empty": {
+      "hint": "جرب: \"اعرض خريطة حرارة المنتج\" أو \"من هو الأكثر عرضة للخطر ؟\""
+    },
+    "turn": {
+      "user": "أنت",
+      "assistant": "المساعد"
+    },
+    "source": {
+      "streaming": "التأليف مع {{brand}}...",
+      "privateAi": "PrivateAI",
+      "bedrockTools": "Amazon Bedrock · tools",
+      "bedrock": "Amazon Bedrock",
+      "rules": "قواعد مدمجة",
+      "rulesFallback": "قواعد مدمجة (__PH0 __ لم تستجب)",
+      "localCatalog": "بيانات الكتاب · كتالوج المنتجات"
+    },
+    "input": {
+      "label": "Ask Customer 360",
+      "placeholder": "اسأل عن مؤشرات الأداء الرئيسية والعملاء والمنتجات... (أدخل للإرسال)"
+    },
+    "send": {
+      "thinking": "التفكير",
+      "submit": "اطرح الأسئلة"
+    },
+    "a11y": {
+      "toggleClose": "مساعد تنفيذي مغلق",
+      "toggleOpen": "مساعد تنفيذي"
+    },
+    "toggleTitle": {
+      "close": "@ info",
+      "open": "فتح المساعد"
+    },
+    "retention": {
+      "showing": "عرض {{shown}} من __ PH1__ العملاء المعرضين للخطر",
+      "atRiskBook": "في خطر {{atRisk}} · كتاب {{book}}",
+      "openList": "فتح القائمة الكاملة في مركز العملاء →",
+      "loadingQueue": "جارٍ تحميل قائمة الانتظار...",
+      "emptyCohort": "لا يوجد عملاء معرضون للخطر في هذه المجموعة حتى الآن.",
+      "lede": "يتم تحديد أولوياته حسب القيمة المعرضة لمخاطر التقلب ؛ حيث يقوم الذكاء الاصطناعي ببث إجراء تالي قصير لكل عميل (بالتوازي).",
+      "loadingAction": "إجراء البث...",
+      "llmUnavailable": "لم يتم تكوين الذكاء الاصطناعي — افتح ملف تعريف العميل للحصول على إرشادات الرؤى الكاملة.",
+      "actionMissing": "تعذر إنشاء إجراء لهذا الصف — افتح الملف الشخصي لتحديث الرؤى.",
+      "actions": {
+        "retention_call": {
+          "title": "مكالمة الاحتفاظ بالأولوية",
+          "detail": "مخاطر عالية على القيمة المادية — ابدأ بالتعاطف وخيارات الدفع/التغطية."
+        },
+        "proactive_review": {
+          "title": "مراجعة السياسة الاستباقية",
+          "detail": "جدولة مراجعة قبل التجديد ؛ معالجة الأسئلة المفتوحة من نقاط الاتصال الرقمية."
+        },
+        "loyalty_check_in": {
+          "title": "تسجيل وصول الولاء",
+          "detail": "فحص العافية بلمسة خفيفة ؛ تأكد من الرضا والبيع المتبادل فقط إذا كانت المشاعر إيجابية."
+        }
+      }
+    }
+  }
+}

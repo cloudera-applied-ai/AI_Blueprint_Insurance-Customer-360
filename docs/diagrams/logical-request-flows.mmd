@@ -1,0 +1,44 @@
+sequenceDiagram
+  autonumber
+  participant Browser as Browser (React)
+  participant API as FastAPI (customer360.api)
+  participant DB as SQLite warehouse
+  participant LLM as LLM (Bedrock / OpenAI-compatible)
+
+  Note over Browser,DB: Read path — lists, profile, portfolio, admin
+  Browser->>API: GET /api/... (customers, overview, detail)
+  API->>DB: SQL (dims, facts, APP_* caches, churn scores)
+  DB-->>API: Result sets / JSON aggregates
+  API-->>Browser: JSON response
+
+  Note over Browser,LLM: AI Insights — customer detail (SSE)
+  Browser->>API: GET .../insights/stream?locale=&refresh=
+  API->>DB: load_customer_context(customer_id)
+  DB-->>API: Consolidated snapshot + churn tier
+  API->>LLM: stream (system + user prompt, ui locale)
+  loop SSE deltas
+    LLM-->>API: token chunks
+    API-->>Browser: event: delta
+  end
+  API-->>Browser: event: done (summary, recommendations, …)
+
+  Note over Browser,LLM: Retention queue — playbook sidebar (SSE)
+  Browser->>API: POST .../playbooks/retention/recommendations/stream
+  API->>DB: compact customer snapshot
+  API->>LLM: stream JSON title + detail (locale)
+  LLM-->>API: chunks
+  API-->>Browser: delta / done per customer_id
+
+  Note over Browser,LLM: Executive assistant (SSE)
+  Browser->>API: POST /api/agent/ask/stream { message, locale, segment }
+  API->>DB: tools / context (book, list, rules fallback)
+  API->>LLM: stream answer JSON (locale)
+  LLM-->>API: chunks
+  API-->>Browser: delta / done (answer, actions)
+
+  Note over Browser,LLM: Outreach draft from insight (SSE)
+  Browser->>API: POST .../insights/action-draft/stream { locale }
+  API->>DB: customer + recommendation context
+  API->>LLM: draft email / SMS / call script
+  LLM-->>API: chunks
+  API-->>Browser: delta / done (subject, body, channel)

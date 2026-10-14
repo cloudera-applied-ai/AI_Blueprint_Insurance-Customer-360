@@ -1,0 +1,271 @@
+{
+  "territory_id": "sa",
+  "seed_language": "ar",
+  "source": "profile",
+  "first_names": [
+    "Mohammed",
+    "Fatima",
+    "Abdullah",
+    "Noura",
+    "Khalid",
+    "Sara",
+    "Fahad",
+    "Layla",
+    "Omar",
+    "Hessa",
+    "Turki",
+    "Maha",
+    "Saud",
+    "Reem",
+    "Yousef",
+    "Aisha",
+    "Bandar",
+    "Dana",
+    "Faisal",
+    "Lama"
+  ],
+  "last_names": [
+    "Al-Rashid",
+    "Al-Harbi",
+    "Al-Otaibi",
+    "Al-Ghamdi",
+    "Al-Qahtani",
+    "Al-Shehri",
+    "Al-Dossari",
+    "Al-Zahrani",
+    "Al-Mutairi",
+    "Al-Anazi",
+    "Al-Shammari",
+    "Al-Enezi",
+    "Al-Johani",
+    "Al-Balawi",
+    "Al-Fahad",
+    "Al-Saud",
+    "Al-Malki",
+    "Al-Hazmi",
+    "Al-Sulaiman",
+    "Al-Khalid"
+  ],
+  "cities": [
+    {
+      "name": "Riyadh",
+      "street": "King Fahd Road",
+      "postal_code": 11564
+    },
+    {
+      "name": "Jeddah",
+      "street": "Palestine Street",
+      "postal_code": 21442
+    },
+    {
+      "name": "Dammam",
+      "street": "King Saud Street",
+      "postal_code": 32241
+    },
+    {
+      "name": "Mecca",
+      "street": "Ibrahim Al Khalil Street",
+      "postal_code": 24231
+    },
+    {
+      "name": "Medina",
+      "street": "King Abdullah Road",
+      "postal_code": 42311
+    },
+    {
+      "name": "Khobar",
+      "street": "Prince Turki Street",
+      "postal_code": 34424
+    },
+    {
+      "name": "Tabuk",
+      "street": "King Abdulaziz Road",
+      "postal_code": 71491
+    },
+    {
+      "name": "Abha",
+      "street": "King Khalid Road",
+      "postal_code": 62521
+    }
+  ],
+  "city_aliases": {
+    "riyadh": "Riyadh",
+    "jeddah": "Jeddah",
+    "dammam": "Dammam",
+    "mecca": "Mecca",
+    "medina": "Medina",
+    "khobar": "Khobar",
+    "tabuk": "Tabuk",
+    "abha": "Abha"
+  },
+  "employers": [
+    [
+      1001,
+      "Saudi Aramco"
+    ],
+    [
+      1002,
+      "SABIC"
+    ],
+    [
+      1003,
+      "STC Group"
+    ],
+    [
+      1004,
+      "Al Rajhi Bank"
+    ],
+    [
+      1005,
+      "NEOM Company"
+    ]
+  ],
+  "corp_names": {
+    "1": "Tawuniya Life",
+    "7": "GOSI Pension",
+    "8": "Alinma Savings"
+  },
+  "funds": [
+    [
+      7,
+      5101,
+      "مسار التقاعد — متوازن"
+    ],
+    [
+      7,
+      5102,
+      "مسار التقاعد — أسهم"
+    ],
+    [
+      1,
+      2101,
+      "ادخار الحياة — محافظ"
+    ],
+    [
+      1,
+      2102,
+      "ادخار الحياة — نمو"
+    ],
+    [
+      8,
+      8101,
+      "صندوق ادخار — متعدد الأصول"
+    ],
+    [
+      8,
+      8102,
+      "صندوق ادخار — مؤشر عالمي"
+    ]
+  ],
+  "marital_status": [
+    {
+      "code": "S",
+      "label": "Single"
+    },
+    {
+      "code": "M",
+      "label": "Married"
+    },
+    {
+      "code": "D",
+      "label": "Divorced"
+    },
+    {
+      "code": "W",
+      "label": "Widowed"
+    }
+  ],
+  "customer_types": [
+    {
+      "type": 1,
+      "label": "National ID"
+    },
+    {
+      "type": 2,
+      "label": "Passport"
+    },
+    {
+      "type": 3,
+      "label": "Iqama"
+    },
+    {
+      "type": 5,
+      "label": "Corporation"
+    }
+  ],
+  "interaction_copy": {
+    "product_searches": [
+      "مقارنة مسارات التقاعد المتوازنة مقابل الأسهم",
+      "أهلية تغطية الأمراض الحرجة",
+      "إضافة فرد للتأمين الصحي التكميلي",
+      "حدود مساهمة صندوق الادخار",
+      "حاسبة تغطية التأمين على الحياة",
+      "عرض تجديد تأمين الممتلكات"
+    ],
+    "help_searches": [
+      "كيفية تحديث طريقة الدفع",
+      "إلغاء أو استرداد الوثيقة",
+      "خيارات الدفع المتأخر",
+      "رمز التحقق من البوابة",
+      "تنزيل كشف الوثيقة السنوي",
+      "إجراءات تقديم الشكاوى",
+      "تغيير تفضيلات التواصل"
+    ],
+    "agent_topics": [
+      {
+        "title": "شرح زيادة القسط",
+        "topic": "billing",
+        "resolved_default": true
+      },
+      {
+        "title": "تغيير مسار الاستثمار للتقاعد",
+        "topic": "investments",
+        "resolved_default": true
+      },
+      {
+        "title": "طلب إلغاء الوثيقة",
+        "topic": "retention",
+        "resolved_default": false
+      },
+      {
+        "title": "فجوة التغطية بعد تغيير الوظيفة",
+        "topic": "coverage",
+        "resolved_default": true
+      },
+      {
+        "title": "أثر الحجز على الوثائق",
+        "topic": "legal",
+        "resolved_default": false
+      },
+      {
+        "title": "متابعة حالة المطالبة",
+        "topic": "claims",
+        "resolved_default": true
+      },
+      {
+        "title": "رسوم مكررة على البطاقة",
+        "topic": "billing",
+        "resolved_default": false
+      }
+    ],
+    "review_titles": [
+      "تجربة تطبيق الجوال",
+      "سرعة معالجة المطالبات",
+      "أسلوب الوكيل الهاتفي",
+      "وضوح كشف التقاعد",
+      "شبكة الخطة الصحية",
+      "أدوات الخدمة الذاتية الرقمية"
+    ],
+    "review_detail_positive": "أشاد بالحل السريع.",
+    "review_detail_negative": "طلب متابعة أوضح.",
+    "agent_detail_resolved": "قدم الوكيل الخطوات التالية.",
+    "agent_detail_unresolved": "العميل بانتظار اتصال.",
+    "web_session_detail": "تم تسجيل الجلسة في التحليلات الرقمية."
+  },
+  "foreclosure_labels": {
+    "yes": "نعم",
+    "no": "لا",
+    "policy": "وثيقة",
+    "claim": "مطالبة"
+  }
+}

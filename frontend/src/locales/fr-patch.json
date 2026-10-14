@@ -1,0 +1,29 @@
+{
+  "app": {
+    "language": "Langue",
+    "languageEn": "En",
+    "languageFr": "Fr",
+    "languageHe": "He",
+    "languageEs": "Es",
+    "languageAr": "Ar",
+    "title": "Customer 360 — Assurance"
+  },
+  "assistant": {
+    "tabs": {
+      "conversation": "Conversation"
+    },
+    "poweredBy": {
+      "rules": "Aucun LLM configuré — règles intégrées uniquement."
+    },
+    "input": {
+      "label": "Interroger Customer 360"
+    }
+  },
+  "customer": {
+    "records": {
+      "tabs": {
+        "interactions": "Interactions"
+      }
+    }
+  }
+}

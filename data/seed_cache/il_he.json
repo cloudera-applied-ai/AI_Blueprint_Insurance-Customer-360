@@ -1,0 +1,274 @@
+{
+  "territory_id": "il",
+  "seed_language": "he",
+  "source": "profile",
+  "first_names": [
+    "David",
+    "Sarah",
+    "Yosef",
+    "Michal",
+    "Avi",
+    "Noa",
+    "Eitan",
+    "Shira",
+    "Ron",
+    "Tamar",
+    "Amir",
+    "Hila",
+    "Omer",
+    "Yael",
+    "Itay",
+    "Rachel",
+    "Daniel",
+    "Leah",
+    "Tom",
+    "Maya"
+  ],
+  "last_names": [
+    "Cohen",
+    "Levi",
+    "Mizrahi",
+    "Peretz",
+    "Biton",
+    "Azoulay",
+    "Dahan",
+    "Abraham",
+    "Friedman",
+    "Goldstein",
+    "Shapiro",
+    "Katz",
+    "Rosenberg",
+    "Ben-David",
+    "Avraham",
+    "Mor",
+    "Barak",
+    "Golan",
+    "Shalev",
+    "Nagar"
+  ],
+  "cities": [
+    {
+      "name": "Tel Aviv",
+      "street": "Rothschild Blvd",
+      "postal_code": 6370001
+    },
+    {
+      "name": "Jerusalem",
+      "street": "Jaffa Road",
+      "postal_code": 9422701
+    },
+    {
+      "name": "Haifa",
+      "street": "Herzl Street",
+      "postal_code": 3300000
+    },
+    {
+      "name": "Beer Sheva",
+      "street": "Rager Blvd",
+      "postal_code": 8448101
+    },
+    {
+      "name": "Netanya",
+      "street": "Herzl Street",
+      "postal_code": 4226001
+    },
+    {
+      "name": "Ashdod",
+      "street": "Menachem Begin Blvd",
+      "postal_code": 7745701
+    },
+    {
+      "name": "Rishon LeZion",
+      "street": "Herzl Street",
+      "postal_code": 7528501
+    },
+    {
+      "name": "Petah Tikva",
+      "street": "Jabotinsky Street",
+      "postal_code": 4910000
+    }
+  ],
+  "city_aliases": {
+    "tel aviv": "Tel Aviv",
+    "jerusalem": "Jerusalem",
+    "haifa": "Haifa",
+    "beer sheva": "Beer Sheva",
+    "beersheba": "Beer Sheva",
+    "netanya": "Netanya",
+    "ashdod": "Ashdod",
+    "rishon lezion": "Rishon LeZion",
+    "rishon": "Rishon LeZion",
+    "petah tikva": "Petah Tikva",
+    "petach tikva": "Petah Tikva"
+  },
+  "employers": [
+    [
+      1001,
+      "Intel Israel"
+    ],
+    [
+      1002,
+      "Tehila Tech Ltd"
+    ],
+    [
+      1003,
+      "Maccabi Healthcare"
+    ],
+    [
+      1004,
+      "Israel Electric Corp"
+    ],
+    [
+      1005,
+      "Bank Hapoalim"
+    ]
+  ],
+  "corp_names": {
+    "1": "Phoenix Life Insurance",
+    "7": "Clal Pension",
+    "8": "Meitav Dash Gemel"
+  },
+  "funds": [
+    [
+      7,
+      5101,
+      "General Pension Track — Balanced"
+    ],
+    [
+      7,
+      5102,
+      "General Pension Track — Equity"
+    ],
+    [
+      1,
+      2101,
+      "Life Savings — Conservative"
+    ],
+    [
+      1,
+      2102,
+      "Life Savings — Growth"
+    ],
+    [
+      8,
+      8101,
+      "Gemel — Multi-Sector"
+    ],
+    [
+      8,
+      8102,
+      "Gemel — Index 500"
+    ]
+  ],
+  "marital_status": [
+    {
+      "code": "נ",
+      "label": "Single"
+    },
+    {
+      "code": "ג",
+      "label": "Married"
+    },
+    {
+      "code": "ר",
+      "label": "Divorced"
+    },
+    {
+      "code": "א",
+      "label": "Widowed"
+    }
+  ],
+  "customer_types": [
+    {
+      "type": 1,
+      "label": "Teudat Zehut"
+    },
+    {
+      "type": 2,
+      "label": "Passport"
+    },
+    {
+      "type": 3,
+      "label": "Military ID"
+    },
+    {
+      "type": 5,
+      "label": "Corporation"
+    }
+  ],
+  "interaction_copy": {
+    "product_searches": [
+      "השוואת מסלולי פנסיה מאוזנים מול מנייתיים",
+      "זכאות לכיסוי מחלות קשות",
+      "הוספת בן משפחה לביטוח בריאות משלים",
+      "תקרות הפקדה לקרן השתלמות",
+      "מחשבון כיסוי ביטוח חיים",
+      "הצעת מחיר לחידוש ביטוח דירה"
+    ],
+    "help_searches": [
+      "איך לעדכן אמצעי תשלום",
+      "ביטול או פדיון פוליסה",
+      "אפשרויות לתשלום חוב פרמיה",
+      "קוד אימות לכניסה לפורטל",
+      "הורדת אישור פוליסה שנתי",
+      "תהליך הגשת תלונה",
+      "שינוי העדפות תקשורת"
+    ],
+    "agent_topics": [
+      {
+        "title": "הסבר על עליית פרמיה",
+        "topic": "billing",
+        "resolved_default": true
+      },
+      {
+        "title": "מעבר מסלול השקעה בפנסיה",
+        "topic": "investments",
+        "resolved_default": true
+      },
+      {
+        "title": "בקשה לביטול פוליסה",
+        "topic": "retention",
+        "resolved_default": false
+      },
+      {
+        "title": "פער כיסוי אחרי החלפת מקום עבודה",
+        "topic": "coverage",
+        "resolved_default": true
+      },
+      {
+        "title": "השפעת עיקול על פוליסות",
+        "topic": "legal",
+        "resolved_default": false
+      },
+      {
+        "title": "מעקב סטטוס תביעה",
+        "topic": "claims",
+        "resolved_default": true
+      },
+      {
+        "title": "חיוב כפול בכרטיס אשראי",
+        "topic": "billing",
+        "resolved_default": false
+      }
+    ],
+    "review_titles": [
+      "חוויית אפליקציה סלולרית",
+      "מהירות טיפול בתביעות",
+      "אדיבות נציג בטלפון",
+      "בהירות דוח פנסיה",
+      "רשת מסלולי בריאות",
+      "כלי שירות עצמי דיגיטליים"
+    ],
+    "review_detail_positive": "שיבח/ה פתרון מהיר.",
+    "review_detail_negative": "ביקש/ה מעקב ברור יותר.",
+    "agent_detail_resolved": "הנציג/ה נתן/נה צעדים להמשך.",
+    "agent_detail_unresolved": "הלקוח/ה ממתין/ה לשיחה חוזרת.",
+    "web_session_detail": "הסשן נרשם באנליטיקה דיגיטלית."
+  },
+  "foreclosure_labels": {
+    "yes": "כן",
+    "no": "לא",
+    "policy": "פוליסה",
+    "claim": "תביעה"
+  }
+}

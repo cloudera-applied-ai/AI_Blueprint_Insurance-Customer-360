@@ -1,0 +1,18 @@
+{
+  "app": {
+    "language": "Idioma",
+    "languageEn": "En",
+    "languageHe": "He",
+    "languageFr": "Fr",
+    "languageEs": "Es",
+    "languageAr": "Ar",
+    "title": "Customer 360 — Seguros"
+  },
+  "customer": {
+    "records": {
+      "tabs": {
+        "interactions": "Interacciones"
+      }
+    }
+  }
+}

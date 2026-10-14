@@ -1,0 +1,271 @@
+{
+  "territory_id": "fr",
+  "seed_language": "fr",
+  "source": "profile",
+  "first_names": [
+    "Lucas",
+    "Emma",
+    "Louis",
+    "Chloé",
+    "Gabriel",
+    "Léa",
+    "Raphaël",
+    "Manon",
+    "Arthur",
+    "Camille",
+    "Jules",
+    "Sarah",
+    "Hugo",
+    "Inès",
+    "Maël",
+    "Jade",
+    "Adam",
+    "Louise",
+    "Paul",
+    "Zoé"
+  ],
+  "last_names": [
+    "Martin",
+    "Bernard",
+    "Dubois",
+    "Thomas",
+    "Robert",
+    "Richard",
+    "Petit",
+    "Durand",
+    "Leroy",
+    "Moreau",
+    "Simon",
+    "Laurent",
+    "Lefebvre",
+    "Michel",
+    "Garcia",
+    "David",
+    "Bertrand",
+    "Roux",
+    "Vincent",
+    "Fournier"
+  ],
+  "cities": [
+    {
+      "name": "Paris",
+      "street": "Rue de Rivoli",
+      "postal_code": 75001
+    },
+    {
+      "name": "Lyon",
+      "street": "Rue de la République",
+      "postal_code": 69001
+    },
+    {
+      "name": "Marseille",
+      "street": "La Canebière",
+      "postal_code": 13001
+    },
+    {
+      "name": "Toulouse",
+      "street": "Rue d'Alsace-Lorraine",
+      "postal_code": 31000
+    },
+    {
+      "name": "Nice",
+      "street": "Avenue Jean Médecin",
+      "postal_code": 6000
+    },
+    {
+      "name": "Nantes",
+      "street": "Rue Crébillon",
+      "postal_code": 44000
+    },
+    {
+      "name": "Strasbourg",
+      "street": "Grand Rue",
+      "postal_code": 67000
+    },
+    {
+      "name": "Bordeaux",
+      "street": "Cours de l'Intendance",
+      "postal_code": 33000
+    }
+  ],
+  "city_aliases": {
+    "paris": "Paris",
+    "lyon": "Lyon",
+    "marseille": "Marseille",
+    "toulouse": "Toulouse",
+    "nice": "Nice",
+    "nantes": "Nantes",
+    "strasbourg": "Strasbourg",
+    "bordeaux": "Bordeaux"
+  },
+  "employers": [
+    [
+      1001,
+      "EDF SA"
+    ],
+    [
+      1002,
+      "Carrefour France"
+    ],
+    [
+      1003,
+      "BNP Paribas"
+    ],
+    [
+      1004,
+      "Orange SA"
+    ],
+    [
+      1005,
+      "TotalEnergies"
+    ]
+  ],
+  "corp_names": {
+    "1": "AXA France Vie",
+    "7": "CNAV Retraite",
+    "8": "Crédit Agricole Épargne"
+  },
+  "funds": [
+    [
+      7,
+      5101,
+      "Plan retraite — Équilibré"
+    ],
+    [
+      7,
+      5102,
+      "Plan retraite — Actions"
+    ],
+    [
+      1,
+      2101,
+      "Épargne vie — Prudent"
+    ],
+    [
+      1,
+      2102,
+      "Épargne vie — Croissance"
+    ],
+    [
+      8,
+      8101,
+      "Fonds — Multi-actifs"
+    ],
+    [
+      8,
+      8102,
+      "Fonds — Indice monde"
+    ]
+  ],
+  "marital_status": [
+    {
+      "code": "C",
+      "label": "Célibataire"
+    },
+    {
+      "code": "M",
+      "label": "Marié(e)"
+    },
+    {
+      "code": "D",
+      "label": "Divorcé(e)"
+    },
+    {
+      "code": "V",
+      "label": "Veuf(ve)"
+    }
+  ],
+  "customer_types": [
+    {
+      "type": 1,
+      "label": "Numéro fiscal"
+    },
+    {
+      "type": 2,
+      "label": "Passeport"
+    },
+    {
+      "type": 3,
+      "label": "Carte de séjour"
+    },
+    {
+      "type": 5,
+      "label": "Société"
+    }
+  ],
+  "interaction_copy": {
+    "product_searches": [
+      "Comparer les fonds de retraite équilibrés et actions",
+      "Éligibilité à la couverture maladies graves",
+      "Ajouter un membre de la famille à la complémentaire santé",
+      "Plafonds de versement sur le plan épargne formation",
+      "Calculateur de couverture décès",
+      "Devis de renouvellement assurance habitation"
+    ],
+    "help_searches": [
+      "Comment mettre à jour le moyen de paiement",
+      "Résilier ou racheter un contrat",
+      "Options en cas de prime impayée",
+      "Code de vérification du portail",
+      "Télécharger l'attestation annuelle",
+      "Procédure de réclamation",
+      "Modifier les préférences de communication"
+    ],
+    "agent_topics": [
+      {
+        "title": "Explication de la hausse de prime",
+        "topic": "billing",
+        "resolved_default": true
+      },
+      {
+        "title": "Changer la ligne d'investissement retraite",
+        "topic": "investments",
+        "resolved_default": true
+      },
+      {
+        "title": "Demande de résiliation",
+        "topic": "retention",
+        "resolved_default": false
+      },
+      {
+        "title": "Lacune de couverture après changement d'emploi",
+        "topic": "coverage",
+        "resolved_default": true
+      },
+      {
+        "title": "Impact d'une saisie sur les contrats",
+        "topic": "legal",
+        "resolved_default": false
+      },
+      {
+        "title": "Suivi du statut de sinistre",
+        "topic": "claims",
+        "resolved_default": true
+      },
+      {
+        "title": "Double débit sur carte bancaire",
+        "topic": "billing",
+        "resolved_default": false
+      }
+    ],
+    "review_titles": [
+      "Expérience application mobile",
+      "Rapidité de traitement des sinistres",
+      "Courtoisie du conseiller téléphonique",
+      "Clarté du relevé retraite",
+      "Réseau de soins",
+      "Outils de self-service digital"
+    ],
+    "review_detail_positive": "A salué la rapidité de résolution.",
+    "review_detail_negative": "A demandé un suivi plus clair.",
+    "agent_detail_resolved": "Le conseiller a indiqué les prochaines étapes.",
+    "agent_detail_unresolved": "Client en attente de rappel.",
+    "web_session_detail": "Session enregistrée dans l'analytique digitale."
+  },
+  "foreclosure_labels": {
+    "yes": "Oui",
+    "no": "Non",
+    "policy": "Contrat",
+    "claim": "Sinistre"
+  }
+}

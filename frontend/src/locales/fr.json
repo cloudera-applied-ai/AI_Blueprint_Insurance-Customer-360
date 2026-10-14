@@ -1,0 +1,1044 @@
+{
+  "app": {
+    "language": "Langue",
+    "languageEn": "En",
+    "languageHe": "He",
+    "languageEs": "Es",
+    "languageAr": "Ar",
+    "languageFr": "Fr",
+    "brand": {
+      "title": "Insurance Customer 360",
+      "tagline": "Cloudera AI · Business and Customer Views"
+    },
+    "a11y": {
+      "applicationAreas": "Domaines d'Application",
+      "administrationNav": "Administration",
+      "skipToMain": "Aller au contenu principal&#10;",
+      "mainContent": "Contenu principal"
+    },
+    "dataFreshness": {
+      "label": "Actualité des données",
+      "warehouse": "Entrepôt",
+      "metricsCache": "Cache des métriques",
+      "portfolioCache": "Cache du portefeuille",
+      "churnScores": "Scores de désabonnement",
+      "churnScored": "{{date}} ({{count}} clients)"
+    },
+    "title": "Customer 360 — Assurance"
+  },
+  "nav": {
+    "workspace": "Workspace",
+    "business": {
+      "title": "La marque",
+      "desc": "KPI du livre, des cohortes et du portefeuille"
+    },
+    "customer": {
+      "title": "Le client",
+      "desc": "Profil 360, informations et sensibilisation"
+    },
+    "engagement": {
+      "title": "Engagement",
+      "desc": "Points de contact, influence et prochaine meilleure action",
+      "short": "Engagement"
+    },
+    "products": {
+      "title": "Niveaux scolaires",
+      "desc": "Carte thermique du produit et analyse approfondie du client"
+    },
+    "admin": {
+      "section": "Administration",
+      "title": "Données et administration",
+      "desc": "Santé, entrepôt, source de données"
+    }
+  },
+  "llm": {
+    "brand": {
+      "bedrock": "Amazon Bedrock",
+      "privateAi": "PrivateAI",
+      "local": "conseiller local"
+    }
+  },
+  "common": {
+    "loading": "Chargement…",
+    "yes": "Oui",
+    "no": "Non",
+    "none": "Aucune",
+    "showAll": "Tout Afficher",
+    "emDash": "—",
+    "a11y": {
+      "breadcrumb": "Fil d’Ariane",
+      "selected": "Sélectionné",
+      "notSelected": "Non sélectionné",
+      "filterToggle": "{{label}}. {{description}} {{state}}.",
+      "loading": "Chargement"
+    }
+  },
+  "errors": {
+    "overviewLoadFailed": "Échec du chargement de la vue d'ensemble",
+    "portfolioLoadFailed": "Échec du chargement des analyses de portefeuille. Redémarrez l'API et exécutez scripts/init_db.py si la base de données est manquante.",
+    "productsLoadFailed": "Échec du chargement des produits",
+    "engagementLoadFailed": "Échec du chargement du hub d'engagement",
+    "adminLoadFailed": "Échec du chargement des données d'administration",
+    "customersLoadFailed": "Échec du chargement des clients",
+    "invalidCustomerId": "ID client(e) non valide",
+    "customerNotFound": "Client non trouvé",
+    "boundary": {
+      "title": "Quelque chose a mal tournée",
+      "hint": "Essayez un rafraîchissement rapide. Si cela persiste, redémarrez l'application et confirmez que le frontend/dist correspond à la version de l'API en cours d'exécution.",
+      "reload": "Recharger la page"
+    },
+    "assistantUnreachable": "Impossible d'atteindre l'assistant. Vérifiez que l'API est en cours d'exécution."
+  },
+  "cohort": {
+    "fullBook": "Réservation complète",
+    "filteredCohort": "Cohorte filtrée",
+    "filteredBy": "Filtrer par « {{label}} »",
+    "fullActiveBook": "Livre client actif complet",
+    "segments": {
+      "customers_all": "Tous les clients",
+      "with_policies": "Avec des politiques",
+      "with_foreclosures": "Avec saisies",
+      "with_investments": "Avec des investissements",
+      "with_insurance_status": "Couverture d&apos;assurance",
+      "with_market_products": "produits marchands"
+    }
+  },
+  "business": {
+    "domainFilter": {
+      "helperAnalytics": "Cliquez sur une carte pour filtrer les analyses. Cliquez à nouveau pour effacer.",
+      "helperCustomerList": "Cliquez sur une carte pour filtrer la liste des clients. Cliquez à nouveau pour effacer.",
+      "refreshedAt": "Compteurs actualisés {{time}}",
+      "policyFoot": "{{active}} active · avg {{avg}} / client",
+      "allBookFoot": "{{policies}} politiques · {{active}} actives"
+    },
+    "cohort": {
+      "filteredBadge": "Cohorte filtrée",
+      "vsBookLead": "Cette tranche représente {{share}} de la valeur totale du client dans le livre complet (référence ci-dessous).",
+      "shareOfBook": "{{pct}}% du livre"
+    },
+    "portfolio": {
+      "sectionGrowth": "Perspectives de croissance et de désabonnement des livres",
+      "ledeFiltered": "{{caption}} — Les indicateurs de performance clés et les graphiques se rechargent lorsque vous modifiez les fiches de présentation ci-dessus.",
+      "ledeFull": "KPI du portefeuille avec des prévisions de désabonnement alignées sur l'industrie sur la valeur totale du client.",
+      "bookHistory": "Historique du livre : {{range}}.",
+      "mobileLead": "{{caption}} · statut de référence sur chaque carte",
+      "objectivesTitle": "Tendances des objectifs stratégiques",
+      "objectivesDefaultNote": "Tendances associées à la croissance de l'épargne à long terme, à la dynamique des primes d'assurance et à l'engagement des clients.",
+      "updating": "Mise à jour des analyses…",
+      "retentionRunScoring": "Exécutez la notation du churn pour estimer le taux de déchéance du portefeuille.",
+      "retentionSub": "Écart de 12 m pondéré par les livres __PH0 __ % · HAUT __ PH1 __ · MED __ PH2__ · BAS {{low}}",
+      "valueAtRiskSub": "Σ valeur client × probabilité de déchéance (pondérée par niveau lorsque le score ML est manquant)",
+      "policyRecordsSub": "{{active}} active · avg {{avg}} / client",
+      "highRiskShareSub": "{{count}} clients À haut risque",
+      "retentionQueueHint": "Ouvrir la file d'attente de rétention dans l'assistant →",
+      "kpi": {
+        "totalBookValue": "4. Valeur comptable totale",
+        "retentionForecast": "Rétention de 12 m (prévision)",
+        "valueAtChurnRisk": "Valeur au risque de désabonnement",
+        "activeCustomers": "Clients actifs",
+        "policyRecords": "Dossiers de politique",
+        "avgCustomerValue": "Valeur client moyenne",
+        "highRiskBookShare": "Part de livre à haut risque",
+        "bookGrowthHistory": "Croissance du livre (historique)",
+        "avgReviewScore": "Note globale de l'évaluation"
+      },
+      "reviewScoreValue": "{{avg}} / 5",
+      "reviewScoreSub": "{{count}} avis dans ce livre",
+      "reviewScoreSubEmpty": "Aucune évaluation dans cette cohorte pour le moment"
+    },
+    "kpi": {
+      "objective": "Objectif : {{target}}",
+      "thermo": {
+        "atOrBelow": "Atteint ou inférieur à l'objectif",
+        "ofLimit": "{{pct}}% de la limite",
+        "ofObjective": "{{pct}}% de l'objectif",
+        "a11y": "{{status}} — {{detail}}"
+      }
+    },
+    "vsBookStats": {
+      "customers": "Clients",
+      "totalBookValue": "4. Valeur comptable totale",
+      "policyRecords": "Dossiers de politique",
+      "avgCustomerValue": "Valeur client moyenne"
+    },
+    "historyMonths": "{{first}} – {{last}} ({{count}} mois)"
+  },
+  "mobile": {
+    "focusTitle": {
+      "business": "Affaires ICP",
+      "customers": "Clients",
+      "customerProfile": "Profil client",
+      "products": "Niveaux scolaires",
+      "engagement": "Engagement",
+      "admin": "Admin",
+      "details": "Détails"
+    },
+    "backToAssistant": "ASSISTANT"
+  },
+  "charts": {
+    "common": {
+      "loading": "Chargement…",
+      "empty": "Aucune donnée pour cette cohorte pour le moment.",
+      "interactiveHint": "Cliquez sur un point pour explorer les clients de ce mois.",
+      "forecast": "météo",
+      "axisLeft": "GAUCHE",
+      "axisRight": "droite/à droite/ droit/bon/tout droit/arranger/conforme à la morale/mettre en ordre/le bien/corriger /redresser/n’est-ce pas?"
+    },
+    "bookValue": {
+      "title": "Valeur comptable ",
+      "subtitle": "Valeur totale du client répartie entre investissements, couverture et économies.",
+      "subtitleCohort": "Lignes pleines = cohorte filtrée ; gris en pointillés = livre client actif complet.",
+      "empty": "Aucun historique de livre pour cette cohorte.",
+      "totalBook": "Total de la réservation",
+      "cohortTotalBook": "Réservation totale de la cohorte",
+      "investments": "Investissements",
+      "coverageSavings": "Couverture et économies",
+      "fullBookRef": "Livre complet (référence)"
+    },
+    "churnHorizon": {
+      "title": "Horizon de désabonnement",
+      "subtitle": "Valeur à risque projetée par mois (péremption pondérée par niveau).",
+      "empty": "Aucune donnée d'horizon de désabonnement pour cette cohorte.",
+      "legendFullBookRef": "Livre complet (référence)",
+      "legendCohortBookActual": "Livre de cohorte (réel)",
+      "legendTotalBookActual": "Total du livre (réel)",
+      "legendExpectedRetained": "Valeur conservée attendue",
+      "legendValueAtRisk": "Valeur au risque de désabonnement",
+      "legendProjectedBook": "Livre projeté (prévision)",
+      "tooltipCohortTotalBook": "Total du livre de la cohorte",
+      "tooltipExpectedRetained": "Attendu retenu",
+      "tooltipValueAtRisk": "valeur à risque",
+      "tooltipFullBookRef": "Livre complet (référence)",
+      "tooltipRetention": "Retenue {{pct}}"
+    },
+    "investmentReturns": {
+      "title": "Rendement des placements",
+      "subtitle": "Rendement cumulé % (ligne, gauche) et rendement d'un mois sur l'autre % (barres, droite). Les barres inférieures à zéro sont des pertes mensuelles.",
+      "subtitleFallback": "Solde d'investissement lorsque l'historique de retour n'est pas disponible.",
+      "empty": "Aucun historique d'investissement pour cette cohorte.",
+      "legendCumulative": "Rendement cumulé",
+      "legendPeriod": "Période de retour",
+      "legendBalance": "Solde d'investissement",
+      "legendCohortBalance": "Solde d'investissement de la cohorte",
+      "legendBookCumulative": "Rendement cumulatif complet du livre (référence)"
+    },
+    "premiumMomentum": {
+      "title": "Politiques actives et Premium",
+      "subtitle": "Prime mensuelle sous forme de ligne (axe de gauche) ; polices moyennes par client et par mois sous forme de barres (axe de droite).",
+      "empty": "Aucune tendance de prime de police pour le livre actif pour le moment.",
+      "legendPremium": "Primes mensuelles",
+      "legendAvgPolicies": "Politiques moyennes/ client",
+      "tooltipAvgPolicies": "Politiques moyennes/ client : {{avg}}",
+      "tooltipPolicyCount": "{{count}} polices actives (total du livre)"
+    },
+    "savingsAum": {
+      "title": "Économies à long terme (Aum)",
+      "subtitle": "Aum (à gauche) et nombre de polices d'épargne (à droite) — plusieurs polices par épargnant sont normales.",
+      "empty": "Pas encore d'historique des instantanés d'économies pour le livre actif.",
+      "legendAum": "Accumulation (Aum)",
+      "legendSavingsPolicies": "Politiques d'épargne",
+      "tooltipSavingsPolicies": "{{count}} polices D'épargne"
+    },
+    "engagementObjective": {
+      "title": "Engagement client",
+      "subtitle": "Note moyenne mensuelle (1 à 5 étoiles) pour le livre ou la cohorte sélectionnée.",
+      "empty": "Aucune évaluation pour le livre actif pour le moment.",
+      "legend": "Score d’évaluation moyen",
+      "tooltipAvg": "Moyenne : {{avg}} / 5",
+      "tooltipCount": "{{count}} avis"
+    },
+    "customerValue": {
+      "title": "La valeur client",
+      "subtitle": "Les lignes pleines sont des instantanés d'entrepôt. Projection en pointillés : le risque ÉLEVÉ passe à {{zeroAmount}} dans les 3 mois ; le risque MOYEN prolonge l'historique récent ; le risque FAIBLE prolonge l'historique complet.",
+      "loading": "Chargement de la valeur client…",
+      "empty": "Aucun historique de valeur pour ce client.",
+      "refreshing": "Actualisation du tableau…",
+      "latestTotal": "Dernier total",
+      "vsStart": "Vs Start",
+      "projected": "Prévu {{months}} mois",
+      "lapseHigh": "Projection de laps de temps à niveau ÉLEVÉ",
+      "legendActual": "Valeur totale réelle",
+      "legendProjected": "Projeté (règles de niveau)",
+      "legendInvestmentAcc": "Cumul des investissements",
+      "legendCoverageSavings": "Couverture et économies (état de la police)",
+      "forecastLegendHighLapse": "Risque élevé — péremption à {{zeroAmount}} (3 mois)",
+      "forecastLegendMedium": "Risque moyen — tendance de l'histoire récente",
+      "forecastLegendLow": "Risque faible — tendance à partir de l'historique complet",
+      "churnTierLabel": "Niveau de désabonnement {{tier}}",
+      "lapseWithin3Months": "Abandon dans les 3 mois",
+      "atRisk": "À risque {{amount}}",
+      "lapsePeriod": "· Lapse {{period}}",
+      "chartA11yWithForecast": "Valeur client au fil du temps avec prévision de l'écart de désabonnement",
+      "chartA11y": "Valeur client dans le temps"
+    }
+  },
+  "customer": {
+    "recent": {
+      "title": "Consulté Récemment"
+    },
+    "homeLink": "Accueil client",
+    "back": {
+      "engagement": "← Retour à l'engagement",
+      "list": "Retour aux clients",
+      "business": "Retour aux affaires"
+    },
+    "link": {
+      "engagementHub": "Retour au centre d'engagement",
+      "list": "Retour au Client",
+      "businessPortfolio": "Portefeuille dans l'entreprise"
+    },
+    "mobile": {
+      "summaryLine": "{{city}} · {{policies}} politiques · {{value}}"
+    },
+    "churn": {
+      "scoredAt": "Taux de désabonnement {{date}}",
+      "notScored": "NON NOTÉ",
+      "likelihoodTitle": "Probabilité de désabonnement {{pct}}",
+      "tier": {
+        "HIGH": "Elevé",
+        "MEDIUM": "Moyenne",
+        "LOW": "Faible"
+      },
+      "badgeA11y": "Risque d'attrition {{tier}}, vraisemblance {{pct}}"
+    },
+    "privacyNotice": "La ville et la dernière connexion sont affichées en entier ; les autres champs PII sont masqués dans cette démo.",
+    "profile": {
+      "type": "Type",
+      "birthDate": "Date Naissance",
+      "maritalStatus": "État civil",
+      "address": "Adresse",
+      "communication": "La communication",
+      "lastInteraction": "Dernière interaction"
+    },
+    "engagementHint": {
+      "prefix": "Suggéré par le centre d'engagement :"
+    },
+    "tabs": {
+      "policies": "Politiques",
+      "foreclosures": "saisie immobilière",
+      "investments": "Investissements",
+      "interactions": "Interactions ",
+      "listLabel": "Sections du dossier client"
+    },
+    "policies": {
+      "title": "Politiques",
+      "hint": "Cliquez sur une stratégie pour filtrer les instantanés d'investissement.",
+      "columns": {
+        "number": "Nombre",
+        "type": "Type",
+        "status": "Statut",
+        "active": "Actif",
+        "monthlyPremium": "Primes mensuelles"
+      },
+      "rowA11y": "Police {{number}}, cliquez pour filtrer les investissements",
+      "rowSelectedA11y": "Police {{number}}, sélectionnée pour le filtre d'investissement"
+    },
+    "foreclosures": {
+      "title": "Forclusions et charges",
+      "empty": "Aucun enregistrement de forclusion.",
+      "columns": {
+        "proceeding": "Procéder",
+        "amount": "Montant",
+        "date": "Date",
+        "portfolio": "Portefeuille"
+      }
+    },
+    "interactions": {
+      "title": "Calendrier des interactions",
+      "lede": "Événements omnicanaux synthétiques à partir de la couche d'engagement de l'entrepôt.",
+      "stats": {
+        "last90d": "90 derniers jours : {{count}} événements",
+        "avgReview": "Révision moyenne : {{avg}}/5",
+        "openAgent": "Ouvrir les éléments de l'agent : {{count}}"
+      },
+      "empty": "Aucun événement d'interaction enregistré.",
+      "eventType": {
+        "review": "Évaluation",
+        "agentQuestion": "Question de l'agent",
+        "webSearch": "Recherche sur Internet"
+      },
+      "signal": {
+        "stars": "{{rating}}/5 étoiles",
+        "resolved": "Résolu",
+        "open": "Ouvert",
+        "helpSearch": "Recherche dans l'aide",
+        "productSearch": "Rechercher un niveau scolaire"
+      }
+    },
+    "investments": {
+      "title": "Derniers instantanés d'investissement",
+      "policyFilter": "page Filtre de stratégie",
+      "empty": "Aucun instantané d'investissement pour cette sélection.",
+      "columns": {
+        "policy": "Politique",
+        "fund": "Caisse",
+        "snapshot": "Instantané",
+        "accumulation": "Accumulation",
+        "ytdPl": "YTD P/L"
+      }
+    },
+    "directory": {
+      "title": "Clients",
+      "titleCompact": "Associer les clients",
+      "chartFilter": {
+        "prefix": "Instantané du graphique :",
+        "clear": "Effacer le filtre de date",
+        "metrics": {
+          "total": "4. Valeur comptable totale",
+          "investment": "Solde d'investissement",
+          "coverage": "couverture et économies",
+          "at_risk": "valeur au risque de désabonnement (livre × probabilité de désabonnement à l'instantané)"
+        }
+      },
+      "cityFilter": {
+        "prefix": "Ville :",
+        "clear": "Effacer le filtre de ville"
+      },
+      "productFilter": {
+        "prefix": "Filtre produit : type {{code}}",
+        "clear": "Effacer les transitoires du filtre de produit"
+      },
+      "cohortFilter": {
+        "prefix": "Filtrer :",
+        "clear": "Effacer le filtre"
+      },
+      "allCohort": "Affichage de tous les clients actuels de cette cohorte",
+      "sort": {
+        "label": "Classement par",
+        "options": {
+          "churn_risk": "Churn, puis value",
+          "customer_value": "Valeur, puis désabonnement",
+          "name": "Nom (A-Z)",
+          "policy_count": "Nombre de politiques",
+          "investment_count": "Pistes d'investissement"
+        },
+        "order": {
+          "valueDesc": "Valeur la plus élevée en premier ↓",
+          "valueAsc": "Valeur la plus basse en premier ↑",
+          "riskDesc": "Risque élevé en premier ↓",
+          "riskAsc": "Risque faible en premier ↑",
+          "defaultDesc": "D'abord les meilleures",
+          "defaultAsc": "D'abord les plus basses"
+        }
+      },
+      "search": {
+        "label": "Rechercher",
+        "placeholder": "Nom ou ID client"
+      },
+      "view": {
+        "label": "Structure",
+        "grid": "Cartes",
+        "table": "Tableau"
+      },
+      "updating": "Mise à jour des cartes/table…",
+      "empty": "Aucun client correspondant",
+      "pagination": {
+        "summaryAll": "Affichage de tous les clients {{total}}",
+        "summaryRange": "Affichage de {{from}}–{{to}} sur {{total}}",
+        "perPage": "Par Page",
+        "previous": "Retour&#10;",
+        "next": "Suivant",
+        "pageOf": "Page {{page}} sur {{pages}}"
+      }
+    },
+    "table": {
+      "empty": "Aucun client ne correspond à ce filtre.",
+      "columns": {
+        "name": "Nom ",
+        "city": "Ville",
+        "value": "Valeur",
+        "churn": "Attrition ",
+        "policies": "Politiques",
+        "investments": "Investissements",
+        "lastLogin": "Dernière connexion",
+        "id": "ID",
+        "email": "E-mail",
+        "mobile": "Mobile"
+      }
+    },
+    "card": {
+      "rankA11y": "Rang {{rank}}",
+      "value": "La valeur client",
+      "policies": "Politiques",
+      "investments": "Investissements",
+      "lastLogin": "Dernière connexion",
+      "churnScored": "Churn Noté",
+      "a11ySummary": "Synthese Client",
+      "reviewsNone": "Aucune évaluation pour le moment",
+      "reviewsAvg": "{{avg}} moyenne · {{count}} avis",
+      "reviewsAvgShort": "{{avg}} moyen",
+      "reviewsStarsA11y": "Évaluation moyenne {{avg}} sur 5 à partir de {{count}} évaluations",
+      "reviewsStarsA11yNoCount": "Évaluation moyenne {{avg}} sur 5"
+    },
+    "insights": {
+      "title": "Informations sur l'IA et prochaine meilleure action",
+      "refresh": "Actualiser les informations",
+      "loadingLlm": "Appel de {{brand}} avec les données d'entrepôt et d'interaction de ce client…",
+      "loadingGeneric": "Générer des informations à partir des données d'entrepôt et d'interaction…",
+      "streamPreview": "Composer la perspicacité...",
+      "loadingLocal": "Génération de conseils avec le conseiller local intégré (aucun LLM n'est configuré).",
+      "idleHint": "Des recommandations exploitables peuvent ouvrir un brouillon à partir des données du compte ; l'envoi est simulé dans cette démo.",
+      "generatedBy": "Ces informations ont été générées par {{brand}}{{model}} à partir du profil, des politiques, des interactions et du score de désabonnement de ce client.",
+      "fallbackReason": "{{brand}} est configuré, mais cette réponse a utilisé le conseiller local. Motif : {{reason}}",
+      "fallbackGeneric": "Montrer au conseiller local pour cette réponse — {{brand}} n'a pas renvoyé de réponse utilisable. Essayez d'actualiser les informations.",
+      "localOnlyBedrock": "Showing the built-in local advisor. Configure AWS credentials and CUSTOMER360_BEDROCK_* variables, or set an LLM provider under Data and Admin.",
+      "localOnlyPrivateAi": "Showing the built-in local advisor. Configure PrivateAI under Data and Admin → Configuration → LLM provider.",
+      "localOnlyGeneric": "Affichage du conseiller local intégré. Configurez un fournisseur de LLM sous Fournisseur de → LLM de → configuration de données et d'administration.",
+      "loadError": "Impossible de charger les informations",
+      "focusChurn": "Churn Focus",
+      "focusUpsell": "Objectif de croissance / vente incitative",
+      "modelTitle": "{{brand}} ID du modèle",
+      "poweredBy": "Propulsé par {{brand}}",
+      "localAdvisor": "Conseiller local",
+      "churnTier": "Niveau de désabonnement : {{tier}}",
+      "modelId": "Modèle : {{id}}",
+      "cachedCopy": "copie en cache",
+      "generatedAt": "Généré : {{at}}",
+      "recommendedActions": "Actions recommandées",
+      "guidanceHeading": "Orientation personnalisée :",
+      "outreachHeading": "Sensibilisation suggérée",
+      "bestNextTouch": "Prochain contact",
+      "llmError": "{{brand}} erreur : {{reason}}",
+      "envHintBedrock": "To enable {{brand}}-generated text, set AWS credentials and optional CUSTOMER360_BEDROCK_* variables (see .env.example).",
+      "envHintPrivateAi": "Pour activer le texte généré par {{brand}}, remplissez les paramètres du fournisseur de LLM sous Données et administration.",
+      "regionHint": "If this persists after Refresh, confirm model access in Bedrock and set CUSTOMER360_BEDROCK_REGION to your AWS region (e.g. us-east-1).",
+      "focusRetention": "Concentration sur la rétention"
+    },
+    "outreach": {
+      "title": "Projet de sensibilisation",
+      "disclaimer": "L'envoi est simulé — aucun message ne quitte ce navigateur.",
+      "to": "A",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "channel": "Canal de DRI",
+      "subject": "Sujet",
+      "body": "Corps",
+      "cancel": "Annuler",
+      "send": "Envoyer (Simulé)",
+      "sent": "Envoi simulé enregistré.",
+      "loadingDraft": "Génération d'un brouillon avec {{brand}} à partir des données du compte…",
+      "streaming": "Composer un brouillon…",
+      "draftError": "Impossible de construire le brouillon",
+      "sendFailed": "Échec de l'envoi simulé",
+      "copyFailed": "Impossible de copier dans le presse-papiers",
+      "notActionable": "Ne donne pas lieu à une action.",
+      "triggeredBy": "Déclenché par :",
+      "draftedBy": "Rédigé par {{brand}}",
+      "copy": "Exemplaire|Organisme : ",
+      "copied": "Copié",
+      "previewEmail": "Ébauche d'e-mail ({{brand}})",
+      "previewSms": "Projet de SMS ({{brand}})",
+      "previewCall": "Script d'appel ({{brand}})"
+    },
+    "valueChart": {
+      "tooltipTotal": "Total {{amount}}",
+      "tooltipInvestments": "Investissements {{amount}}",
+      "tooltipCoverage": "Couverture {{amount}}",
+      "predictedLapse": "Annulation prévue — valeur à {{zeroAmount}}",
+      "projectedSuffix": "(prévu)",
+      "legendActualFull": "Valeur totale du client (réelle)"
+    },
+    "records": {
+      "tabs": {
+        "interactions": "Interactions"
+      }
+    }
+  },
+  "engagement": {
+    "title": "Engagement et points de contact",
+    "lede": "Donnez la priorité aux clients ayant la plus forte propension à influencer les résultats — classés pour la sensibilisation.",
+    "domainFilter": {
+      "helper": "Filtre de cohorte facultatif (mêmes cartes que l'entreprise)."
+    },
+    "summary": {
+      "touchpoints90": {
+        "label": "Points de contact (90j)",
+        "sub": "{{count}} clients actifs"
+      },
+      "digital90": {
+        "label": "Numérique et agent",
+        "sub": "Recherches sur le Web et questions des agents"
+      },
+      "reviews90": {
+        "label": "Avis (90j)",
+        "sub": "Événements Voix du client"
+      },
+      "openAgent": {
+        "label": "Questions ouvertes à l'agent",
+        "sub": "Nécessite une résolution dans une fenêtre 90d"
+      }
+    },
+    "list": {
+      "title": "Liste des priorités d'influence",
+      "titleMobile": "Meilleure sensibilisation",
+      "lede": "Classé par score d'influence (propension × valeur). Affichage de {{shown}} sur {{total}}.",
+      "empty": "Aucune opportunité d'engagement ne correspond à ce filtre.",
+      "bookSuffix": "{{value}} réserver"
+    },
+    "loading": "Chargement des opportunités d'engagement...",
+    "influence": {
+      "label": "Influence"
+    },
+    "a11y": {
+      "influenceTitle": "Propension à influencer",
+      "influenceScore": "Score d'influence {{score}} sur 100"
+    },
+    "touchpoints": {
+      "count90": "{{count}} points DE contact (90j)",
+      "webSearches": "{{count}} recherches sur LE Web",
+      "reviews": "{{count}} avis",
+      "openQuestions": "{{count}} questions ouvertes",
+      "daysSince": "{{days}}d depuis la dernière touche"
+    },
+    "action": {
+      "recommendedLabel": "Prochaine étape recommandée",
+      "actChannel": "Act — {{channel}}",
+      "viewTouchpoints": "Afficher les points de contact"
+    },
+    "channel": {
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "sms": "SMS"
+    },
+    "actions": {
+      "resolve_agent_question": {
+        "title": "Résoudre la question ouverte de l'agent",
+        "detail": "{{count}} question(s) non résolue (s) au cours des 90 derniers jours — appel ou message alors que le contexte est nouveau."
+      },
+      "retention_call": {
+        "title": "Appel de rétention (le canal est chaud)",
+        "detail": "Risque de désabonnement élevé mais points de contact récents — donnez la priorité à une conversation sur la rétention humaine."
+      },
+      "reengagement_outreach": {
+        "title": "Sensibilisation au réengagement",
+        "detail": "Aucun contact récent — envoyez un enregistrement personnalisé (e-mail ou SMS) et proposez un commentaire numérique."
+      },
+      "invite_review": {
+        "title": "Inviter des commentaires après la recherche numérique",
+        "detail": "Le client recherche des produits/de l'aide en ligne — demandez un avis rapide ou une impulsion de satisfaction."
+      },
+      "relationship_review": {
+        "title": "Planifier l'examen de la relation",
+        "detail": "Engagement stable — réservez un commentaire proactif pour discuter de la couverture et des objectifs d'épargne."
+      }
+    }
+  },
+  "products": {
+    "lede": "Produits politiques regroupés par classe — l'intensité cellulaire reflète le nombre de clients dans la cohorte sélectionnée.",
+    "mobile": {
+      "title": "Meilleurs produits"
+    },
+    "filter": {
+      "banner": "Affichage de {{segment}}{{city}}",
+      "clear": "Effacer filtres"
+    },
+    "legend": {
+      "highest": "Intégration la plus élevée",
+      "strong": "Fort",
+      "moderate": "Moyen",
+      "lighter": "Briquet"
+    },
+    "a11y": {
+      "legend": "Intensité du nombre de clients",
+      "productCard": "{{name}}, {{count}} clients, {{policies}} politiques actives"
+    },
+    "filters": {
+      "cohort": "Cohorte de clients",
+      "city": "Ville",
+      "allCities": "Toutes les villes"
+    },
+    "loading": "Chargement du catalogue de produits…",
+    "customersCount": "{{count}} clients",
+    "activePoliciesCount": "{{count}} politiques actives",
+    "classStats": "{{customers}} clients · {{policies}} politiques",
+    "empty": "Aucun produit de police dans l'entrepôt.",
+    "classes": {
+      "life_protection": "et protection",
+      "health": "Santé et Complémentaire",
+      "property": "Propriété et élémentaire",
+      "long_term_savings": "économies à long terme"
+    }
+  },
+  "admin": {
+    "mobile": {
+      "snapshotTitle": "Instantané de l'entrepôt",
+      "flags": "Indicateurs de qualité :",
+      "healthFlags": "Drapeaux de santé :",
+      "desktopHint": "Ouvrez la vue de bureau pour la carte de schéma et les benchmarks KPI."
+    },
+    "title": "Administrateur d'entrepôt et de données",
+    "lede": "Inventaire des tableaux, horodatages de chargement, contrôles d'exhaustivité et configuration pour les objectifs KPI.",
+    "loading": "Chargement des métadonnées d'administration…",
+    "health": {
+      "title": "Santé du système",
+      "lede": "L'exécution vérifie l'API, la connectivité de l'entrepôt, les caches et la fraîcheur des scores de désabonnement.",
+      "attentionNote": "{{count}} vérification(s) nécessitant une attention particulière (avertissement ou critique)."
+    },
+    "kpi": {
+      "databaseFile": {
+        "label": "Fichier de base de données"
+      },
+      "warehouseLoaded": {
+        "label": "Dernier entrepôt chargé"
+      },
+      "cataloguedTables": {
+        "label": "Tables cataloguées"
+      },
+      "qualityFlags": {
+        "label": "Indicateurs de qualité",
+        "sub": "Contrôles d'exhaustivité non-OK"
+      }
+    },
+    "tables": {
+      "title": "vue d'ensemble du tableau",
+      "lede": "Le nombre de lignes est en direct à partir du backend de l'entrepôt configuré.",
+      "columns": {
+        "table": "Tableau",
+        "layer": "Couche",
+        "domain": "Domaine",
+        "rows": "Lignes",
+        "lastLoaded": "Dernière fois chargé",
+        "sourceJob": "Mission source"
+      }
+    },
+    "schema": {
+      "title": "Schéma Map",
+      "lede": "Each card lists live SQLite columns for demo tables; join reference shows relationships.",
+      "joinReference": "Joindre la référence",
+      "joinColumns": {
+        "from": "À partir de",
+        "to": "A",
+        "join": "Rejoindre",
+        "cardinality": "Cardinalité"
+      }
+    },
+    "quality": {
+      "title": "Exhaustivité et qualité des données"
+    },
+    "config": {
+      "title": "Configuration",
+      "lede": "Connectivité de l'entrepôt et objectifs KPI de l'entreprise utilisés sur la page de l'entreprise.",
+      "a11y": "Configuration de l'administrateur",
+      "tabs": {
+        "warehouse": "Backend de l'entrepôt",
+        "llm": "Fournisseur LLM",
+        "kpiBenchmarks": "Indicateurs de performance clés (KPI) de l'entreprise",
+        "appearance": "Apparence et thèmes",
+        "localization": "Localisation et territoire"
+      }
+    },
+    "localization": {
+      "loading": "Chargement des paramètres de localisation…",
+      "loadError": "Impossible de charger les paramètres de localisation",
+      "saveError": "Impossible d'enregistrer les paramètres de localisation",
+      "saved": "Paramètres de localisation enregistrés.",
+      "save": "Enregistrer la localisation",
+      "saving": "Enregistrement…",
+      "territoryLegend": "Profil du territoire de démonstration",
+      "territoryLede": "La région contrôle le contexte du marché des devises, des villes et des LLM. Il est distinct de la langue de l'interface utilisateur et de la langue de départ utilisée pour le texte d'interaction dans l'entrepôt.",
+      "useWarehouseTerritory": "Utiliser le territoire de l'entrepôt d'ensemencement ({{id}})",
+      "territoryLabel": "Remplacer le profil de territoire",
+      "localeLegend": "Application language",
+      "localeLede": "Langue d'interface utilisateur préférée pour les étiquettes et les invites LLM. Stocké dans la base de données d'administration pour tous les utilisateurs de ce déploiement.",
+      "localeLabel": "Langue de l'interface utilisateur",
+      "localeDefault": "Localité principale pour le territoire",
+      "mismatchWarning": "L'entrepôt a été sélectionné pour {{warehouse}}, mais le remplacement par l'administrateur est {{admin}}. Le contexte de devise et de LLM suit le profil d'administrateur ; les noms de ville dans les données peuvent toujours correspondre au territoire de départ.",
+      "lastUpdated": "Dernière mise à jour {{date}}",
+      "warehouseSeedLanguage": "Langue de copie de l'interaction avec l'entrepôt : {{language}}",
+      "reseedLegend": "Entrepôt de réapprovisionnement",
+      "reseedLede": "Rebuild the SQLite warehouse with a chosen region (geography) and seed language. When an LLM provider is configured, names, cities, and interaction text are generated for that pair; otherwise cached or built-in profile data is used. This replaces existing customer data.",
+      "reseedRegionLabel": "Région semencière",
+      "reseedLanguageLabel": "Langue des semences",
+      "reseedButton": "Entrepôt de réapprovisionnement",
+      "reseeding": "réensemencement",
+      "reseedConfirm": "Remplacer toutes les données de l'entrepôt par la région « {{region}} » et la langue de départ « {{language}} » ?",
+      "reseedDone": "Entrepôt réapprovisionné pour {{region}} avec {{language}} copie ({{count}} clients).",
+      "reseedError": "Échec du réensemencement de l'entrepôt"
+    },
+    "llm": {
+      "lede": "Choose the backend for customer insights, outreach drafts, and the executive assistant. Bedrock remains the default; PrivateAI uses a stored API token (never shown after save).",
+      "loading": "Chargement de la configuration LLM…",
+      "loadError": "Impossible de charger les paramètres LLM",
+      "loadTimeout": "Délai de chargement des paramètres LLM dépassé. Redémarrez l'API si vous l'avez récemment déployée, puis réessayez.",
+      "retry": "Réessayer",
+      "saveError": "Impossible d&apos;enregistrer la configuration.",
+      "saved": "Configuration enregistrée.",
+      "save": "Enregistrer les paramètres LLM",
+      "saving": "Enregistrement…",
+      "test": "Fournisseur du test",
+      "testing": "Test",
+      "testFailed": "Échec du test du fournisseur",
+      "providerLegend": "Fournisseur actif",
+      "providers": {
+        "bedrock": "Amazon Bedrock (default)",
+        "privateAi": "PrivateAI"
+      },
+      "bedrockSection": "Remplacements du modèle de substratum rocheux",
+      "bedrockHint": "AWS credentials stay in the environment or instance profile. Override region and model ID here when needed.",
+      "bedrockRegion": "Région du substratum rocheux",
+      "bedrockModelId": "ID du modèle",
+      "privateAiSection": "PrivateAI Endpoint",
+      "privateAiBaseUrl": "URL de base",
+      "privateAiModelId": "ID du modèle",
+      "privateAiToken": "Jeton d’API",
+      "tokenPlaceholderEmpty": "Coller le jeton API",
+      "tokenHintSet": "Un jeton est déjà stocké. Laissez ce champ vide pour le conserver ou entrez un nouveau jeton pour le remplacer.",
+      "clearToken": "Supprimer le jeton API stocké",
+      "samplingSection": "Limites de génération (tous les fournisseurs)",
+      "maxTokens": "Jetons Max",
+      "temperature": "Température"
+    },
+    "datasource": {
+      "title": "Backend de l'entrepôt",
+      "modeLegend": "Mode backend",
+      "sqlite": "SQLite file (demo)",
+      "trino": "Trino / Iceberg",
+      "sqlitePath": "SQLite Path",
+      "trinoHost": "URL Trino JDBC",
+      "catalog": "Catalogue",
+      "schema": "Schéma",
+      "icebergRest": "URL DU catalogue Iceberg REST",
+      "save": "Enregistrer la configuration",
+      "testConnection": "Test de connection",
+      "saving": "Enregistrement…",
+      "saved": "Configuration enregistrée.",
+      "error": "L’enregistrement de la configuration a échoué.",
+      "lastUpdated": "Dernière mise à jour {{date}}",
+      "loadingConfig": "Chargement de la configuration du backend…",
+      "backendTypeLegend": "Type de Backend",
+      "sqliteDefault": "SQLite (default)",
+      "cdwJdbc": "Cloudera Data Warehouse (JDBC)",
+      "lakehouseIceberg": "Lakehouse (Iceberg)",
+      "sqliteFilePath": "SQLite File Path",
+      "jdbcUrl": "URL de JDBC",
+      "cdwHostOptional": "Hôte CDW (facultatif si l'URL JDBC est définie)",
+      "port": "Port",
+      "user": "Utilisateur",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "•••••• (inchangé si vide)",
+      "useTlsTrino": "Utiliser TLS pour le test HTTP Trino",
+      "icebergRestUri": "URI DU catalogue Iceberg REST",
+      "catalogName": "Nom du catalogue",
+      "namespace": "Namespace (espace de noms)",
+      "loadError": "Échec du chargement des paramètres de la source de données",
+      "saveError": "L’enregistrement de la configuration a échoué.",
+      "testError": "Échec du test de connexion.",
+      "testOk": "OK",
+      "testFailedShort": "Échec"
+    },
+    "kpiBenchmarks": {
+      "title": "Indicateurs de performance clés (KPI) de l'entreprise",
+      "lede": "Cibles indiquées sur les cartes KPI du portefeuille (thermomètre et ligne d'objectif).",
+      "columns": {
+        "kpi": "KPI",
+        "target": "Target",
+        "unit": "Unité",
+        "direction": "Direction",
+        "preview": "Aperçu"
+      },
+      "help": "Les valeurs sont stockées dans les métadonnées d'administration et appliquées lors du prochain chargement du portefeuille.",
+      "preview": "Aperçu",
+      "save": "Enregistrer les indices de référence",
+      "saving": "Enregistrement…",
+      "saved": "Points de référence enregistrés.",
+      "placeholderAuto": "Auto ",
+      "loadError": "Échec du chargement des benchmarks KPI",
+      "saveError": "Echec de l’enregistrement",
+      "previewAuto": "Automatique (à partir du portefeuille)",
+      "previewLabel": "Aperçu:",
+      "enabledColumn": "Activée",
+      "enabledA11y": "Activer {{label}}",
+      "amberHelpHigher": "Ambre lorsqu'au moins cette fraction de l'objectif (par exemple 0,85 = 85 %).",
+      "amberHelpLower": "Ambre jusqu'à ce multiple de l'objectif (par exemple 1,2 = 20 % au-dessus de la limite).",
+      "direction": {
+        "higher": "Supérieur c'est mieux",
+        "lower": "Plus bas c'est mieux"
+      },
+      "unitKind": {
+        "money": "Argent (ils)",
+        "integer": "Nombre entier",
+        "ratio": "Ratio (0–1)",
+        "percent": "Pour cent"
+      },
+      "descriptions": {
+        "total_book_value": "Objectif du portefeuille pour la valeur totale du client (ils).",
+        "active_customers": "Objectif de taille de livre pour les clients actuels dans le périmètre.",
+        "annual_retention_rate_forecast": "Taux de rétention annuel cible (0–1, par exemple 0,92 = 92 %).",
+        "value_at_risk_12m": "Valeur à risque maximale acceptable sur 12 mois (ils).",
+        "avg_customer_value": "Objectif de valeur client moyen (ils).",
+        "high_risk_book_pct": "% maximum de livre dans le niveau de désabonnement ÉLEVÉ.",
+        "book_growth_pct": "Objectif historique de croissance du livre (%)."
+      }
+    },
+    "schemaDiagram": {
+      "cachesTitle": "Caches, Config et Référence",
+      "cachesLede": "Tables API et paramètres d'administration pré-calculés (les jointures logiques se font principalement via des clés client ou à l'échelle du livre).",
+      "legendPk": "Clé Primaire",
+      "legendFk": "Joindre /Colonne FK",
+      "legendArrows": "Les flèches suivent les métadonnées de la relation API ; survolez une ligne pour l'étiquette de jointure.",
+      "rowsSuffix": "lignes",
+      "notCreated": "PAS CRÉÉ",
+      "noColumns": "Aucune colonne (tableau manquant dans la base de données)",
+      "tableSchemaA11y": "Tableau {{name}} schéma"
+    },
+    "appearance": {
+      "modeLegend": "MODE JOUR / NUIT",
+      "mode": {
+        "light": "Legere",
+        "dark": "Foncé"
+      },
+      "colorLegend": "Palette d'accentuation",
+      "colorLede": "Les teintes pastel de l'espace de travail simulent un reskin léger — l'en-tête, la navigation, les liens et les contrôles primaires suivent l'accent.",
+      "colors": {
+        "blue": "Bleu (par défaut).",
+        "purple": "Violet",
+        "green": "Vert",
+        "red": "Red",
+        "teal": "Turquoise"
+      }
+    },
+    "status": {
+      "ok": "OK",
+      "warn": "Avertissement",
+      "critical": "Critique"
+    },
+    "checks": {
+      "customers": {
+        "label": "Clients",
+        "summary": "Aucun client actuel dans la dimension."
+      },
+      "email_coverage": {
+        "label": "E-mail renseigné",
+        "summary": "{{pct}}% des clients actuels ont un e-mail."
+      },
+      "mobile_coverage": {
+        "label": "Mobile renseigné",
+        "summary": "{{pct}}% des clients actuels ont un numéro de téléphone portable."
+      },
+      "churn_coverage": {
+        "label": "Scores de désabonnement présents",
+        "summary": "Churn note la couverture pour le livre actif.",
+        "detail": "Exécutez 3_job-train-churn-model après l'initialisation de l'entrepôt."
+      },
+      "metrics_cache": {
+        "label": "Cache des métriques de liste",
+        "summary": "Nombre de lignes de cache des métriques de la liste des clients.",
+        "detail": "Actualisez avec scripts/refresh_api_caches.py si périmé."
+      },
+      "policy_coverage": {
+        "label": "Clients avec ≥1 police",
+        "summary": "Part des clients ayant au moins une police."
+      },
+      "scd_uniqueness": {
+        "label": "Ligne actuelle unique par ID client",
+        "summary": "Chaque ID client a au plus une ligne de dimension actuelle."
+      },
+      "policy_referential": {
+        "label": "Politiques Référencer les clients actuels",
+        "summary": "Politiques orphelines non liées à une ligne client actuelle."
+      },
+      "investment_amounts": {
+        "label": "Instantanés d'investissement avec solde",
+        "summary": "{{pct}}% des lignes d'instantanés d'investissement ont une accumulation non nulle."
+      },
+      "churn_high_tier": {
+        "label": "Niveau de désabonnement élevé (Informationnel)",
+        "summary": "Les clients ont classé le risque ÉLEVÉ (modèle actuel)."
+      },
+      "api": {
+        "label": "Customer 360 API",
+        "summary": "L'API est joignable et sert cette demande d'administration.",
+        "detail": "Point de terminaison de santé : GET /api/health"
+      },
+      "data_source": {
+        "label": "Backend d'entrepôt configuré"
+      },
+      "database": {
+        "label": "SQLite Warehouse",
+        "detail": "Run 2_job-init-database or python3 -m customer360.seed."
+      },
+      "llm": {
+        "label": "Fournisseur LLM",
+        "detail": "Configure Bedrock via AWS credentials or choose PrivateAI under Data and Admin → Configuration → LLM provider."
+      },
+      "churn_model": {
+        "label": "Score de désabonnement",
+        "detail": "Exécutez 3_job-train-churn-model après l'initialisation de l'entrepôt."
+      }
+    }
+  },
+  "assistant": {
+    "title": "Assistante de direction",
+    "shortTitle": "Assistant",
+    "lede": {
+      "phone": "Renseignez-vous sur le livre, puis ouvrez un lien pour concentrer cette page sur votre téléphone.",
+      "desktop": "Renseignez-vous sur le livre ; les liens modifient la vue principale ou ouvrent la file d'attente de rétention."
+    },
+    "poweredBy": {
+      "configured": "Backend LLM actif : {{brand}}.",
+      "rules": "Aucun LLM configuré — règles intégrées uniquement."
+    },
+    "tabs": {
+      "conversation": "Conversation",
+      "retention": "File d'attente de rétention",
+      "listA11y": "Panneaux assistants"
+    },
+    "empty": {
+      "hint": "Essayez : « Afficher la carte thermique du produit » ou « Qui est le plus à risque de désabonnement ? »"
+    },
+    "turn": {
+      "user": "pour vous",
+      "assistant": "Assistant"
+    },
+    "source": {
+      "streaming": "Composer avec {{brand}}…",
+      "privateAi": "PrivateAI",
+      "bedrockTools": "Amazon Bedrock · tools",
+      "bedrock": "Amazon Bedrock",
+      "rules": "Règles intégrées",
+      "rulesFallback": "Règles intégrées ({{brand}} n'a pas répondu)",
+      "localCatalog": "Données du livre · catalogue de produits"
+    },
+    "input": {
+      "label": "Interroger Customer 360",
+      "placeholder": "Renseignez-vous sur les KPI, les clients, les produits… (Entrez pour envoyer)"
+    },
+    "send": {
+      "thinking": "Réflexion ",
+      "submit": "Posez des questions"
+    },
+    "a11y": {
+      "toggleClose": "Fermer l'assistant exécutif",
+      "toggleOpen": "Assistante de direction"
+    },
+    "toggleTitle": {
+      "close": "Fermer l&apos; assistant@info",
+      "open": "Ouvrir l’assistant de lien"
+    },
+    "retention": {
+      "showing": "Affichage de {{shown}} de {{total}} clients à risque",
+      "atRiskBook": "À risque {{atRisk}} · Livre {{book}}",
+      "openList": "Ouvrir la liste complète dans le hub client →",
+      "loadingQueue": "Chargement de la file d'attente…",
+      "emptyCohort": "Aucun client à risque noté dans cette cohorte pour le moment.",
+      "lede": "Priorisé en fonction de la valeur au risque de désabonnement ; l'IA diffuse une courte action suivante par client (en parallèle).",
+      "loadingAction": "Action en streaming...",
+      "llmUnavailable": "L'IA n'est pas configurée — ouvrez un profil client pour obtenir des conseils complets.",
+      "actionMissing": "Impossible de générer une action pour cette ligne — ouvrez le profil pour actualiser les informations.",
+      "actions": {
+        "retention_call": {
+          "title": "Appel de rétention prioritaire",
+          "detail": "Risque de péremption élevé sur la valeur matérielle — diriger avec empathie et options de paiement/couverture."
+        },
+        "proactive_review": {
+          "title": "Examen proactif de la politique",
+          "detail": "Planifiez un examen avant le renouvellement ; répondez aux questions ouvertes à partir des points de contact numériques."
+        },
+        "loyalty_check_in": {
+          "title": "Loyalty Check-In",
+          "detail": "Contrôlez le bien-être au toucher léger ; confirmez la satisfaction et effectuez des ventes croisées uniquement si le sentiment est positif."
+        }
+      }
+    }
+  }
+}
