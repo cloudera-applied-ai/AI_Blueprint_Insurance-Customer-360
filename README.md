@@ -6,7 +6,7 @@
 [![Stars](https://img.shields.io/github/stars/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/stargazers)
 [![Forks](https://img.shields.io/github/forks/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/network/members)
 
-> Unified customer dashboard for **Cloudera AI (CAI)**, backed by a **DDS-aligned SQLite warehouse**, with churn scoring, synthetic interaction events, and optional **Amazon Bedrock** for AI insights and outreach drafts.
+> Unified customer dashboard for **Cloudera AI (CAI)**, backed by a **DDS-aligned warehouse**, with churn scoring, synthetic interaction events, and optional **Amazon Bedrock** for AI insights and outreach drafts.
 
 ## Table of Contents
 
