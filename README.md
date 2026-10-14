@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](requirements.txt)
 [![Cloudera Blueprint](https://img.shields.io/badge/Cloudera-Blueprint-f96702.svg)](METADATA.yaml)
+[![Author-Chris Royles](https://img.shields.io/badge/Author-Chris%20Royles-555555)]()
 [![Stars](https://img.shields.io/github/stars/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/stargazers)
 [![Forks](https://img.shields.io/github/forks/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360?logo=github)](https://github.com/cloudera-applied-ai/AI_Blueprint_Insurance-Customer-360/network/members)
 
